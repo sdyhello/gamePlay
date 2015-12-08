@@ -451,7 +451,7 @@
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string></string>
+		<string>OPTestLayer</string>
 		<key>displayName</key>
 		<string>CCLayer</string>
 		<key>jsController</key>
@@ -459,7 +459,7 @@
 		<key>memberVarAssignmentName</key>
 		<string></string>
 		<key>memberVarAssignmentType</key>
-		<integer>0</integer>
+		<integer>1</integer>
 		<key>properties</key>
 		<array>
 			<dict>

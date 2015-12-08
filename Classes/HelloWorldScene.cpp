@@ -1,7 +1,9 @@
 #include "HelloWorldScene.h"
-
+#include "cocosbuilder/CocosBuilder.h"
+#include "OPTestLayer.h"
+#include "OPTestLayerLoader.h"
 USING_NS_CC;
-
+using namespace cocosbuilder;
 Scene* HelloWorld::createScene()
 {
     // 'scene' is an autorelease object
@@ -72,8 +74,26 @@ bool HelloWorld::init()
     // add the sprite as a child to this layer
     this->addChild(sprite, 0);
     
+    auto nodeLoaderLibrary = NodeLoaderLibrary::newDefaultNodeLoaderLibrary();
+    
+    nodeLoaderLibrary->registerNodeLoader("OPTestLayer", OPTestLayerLoader::loader());
+    
+    /* Create an autorelease CCBReader. */
+    cocosbuilder::CCBReader * ccbReader = new cocosbuilder::CCBReader(nodeLoaderLibrary);
+    
+    /* Read a ccbi file. */
+    auto node = ccbReader->readNodeGraphFromFile("MainScene.ccbi", this);
+    
+    ccbReader->release();
+    
+    if (node != nullptr) {
+        this->addChild(node);
+    }
+
+    //auto nodeLoaderLibrary = NodeLoderLibrary
     return true;
 }
+
 
 
 void HelloWorld::menuCloseCallback(Ref* pSender)

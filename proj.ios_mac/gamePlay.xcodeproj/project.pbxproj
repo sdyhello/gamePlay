@@ -59,6 +59,8 @@
 		521A8EA919F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
+		615E644B1C16B7CE0061EBF9 /* OPTestLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 615E64491C16B7CE0061EBF9 /* OPTestLayer.cpp */; };
+		615E64701C16F1A30061EBF9 /* MainScene.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 615E646F1C16F1A30061EBF9 /* MainScene.ccbi */; };
 		61935C3A1C168BED0077685C /* libTalkingDataGA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61935C331C168BED0077685C /* libTalkingDataGA.a */; };
 		61935C3B1C168BED0077685C /* TDCCAccount.mm in Sources */ = {isa = PBXBuildFile; fileRef = 61935C351C168BED0077685C /* TDCCAccount.mm */; };
 		61935C3C1C168BED0077685C /* TDCCItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 61935C361C168BED0077685C /* TDCCItem.mm */; };
@@ -164,6 +166,10 @@
 		521A8E6319F0C34300D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		615E64491C16B7CE0061EBF9 /* OPTestLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OPTestLayer.cpp; sourceTree = "<group>"; };
+		615E644A1C16B7CE0061EBF9 /* OPTestLayer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = OPTestLayer.h; sourceTree = "<group>"; };
+		615E644C1C16B9FD0061EBF9 /* OPTestLayerLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPTestLayerLoader.h; sourceTree = "<group>"; };
+		615E646F1C16F1A30061EBF9 /* MainScene.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = MainScene.ccbi; sourceTree = "<group>"; };
 		61935C2C1C168BED0077685C /* TalkingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkingData.h; sourceTree = "<group>"; };
 		61935C2D1C168BED0077685C /* TDCCAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDCCAccount.h; sourceTree = "<group>"; };
 		61935C2E1C168BED0077685C /* TDCCItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDCCItem.h; sourceTree = "<group>"; };
@@ -326,6 +332,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				615E646F1C16F1A30061EBF9 /* MainScene.ccbi */,
 				521A8EA819F11F5000D177D7 /* fonts */,
 				3EACC98E19EE6D4300EB3C5E /* res */,
 				46880B7619C43A67006E1F66 /* CloseNormal.png */,
@@ -339,6 +346,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				615E64711C16F1D40061EBF9 /* testLayer */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
@@ -394,6 +402,16 @@
 			name = Icons;
 			path = ios;
 			sourceTree = SOURCE_ROOT;
+		};
+		615E64711C16F1D40061EBF9 /* testLayer */ = {
+			isa = PBXGroup;
+			children = (
+				615E644C1C16B9FD0061EBF9 /* OPTestLayerLoader.h */,
+				615E644A1C16B7CE0061EBF9 /* OPTestLayer.h */,
+				615E64491C16B7CE0061EBF9 /* OPTestLayer.cpp */,
+			);
+			name = testLayer;
+			sourceTree = "<group>";
 		};
 		61935C2B1C168BED0077685C /* include */ = {
 			isa = PBXGroup;
@@ -535,6 +553,7 @@
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
+				615E64701C16F1A30061EBF9 /* MainScene.ccbi in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
@@ -572,6 +591,7 @@
 				61935C3C1C168BED0077685C /* TDCCItem.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				61935C3F1C168BED0077685C /* TDCCVirtualCurrency.mm in Sources */,
+				615E644B1C16B7CE0061EBF9 /* OPTestLayer.cpp in Sources */,
 				61935C3D1C168BED0077685C /* TDCCMission.mm in Sources */,
 				61935C3E1C168BED0077685C /* TDCCTalkingDataGA.mm in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
