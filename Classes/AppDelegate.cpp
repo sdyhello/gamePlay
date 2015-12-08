@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
+#include "TalkingData.h"
 
 USING_NS_CC;
 
@@ -14,6 +15,7 @@ AppDelegate::AppDelegate() {
 
 AppDelegate::~AppDelegate() 
 {
+    TDCCTalkingDataGA::onKill();
 }
 
 //if you want a different context,just modify the value of glContextAttrs
@@ -79,7 +81,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // run
     director->runWithScene(scene);
-
+    TDCCTalkingDataGA::onStart("BD6757D9C98331C75784E0FDEA8B3299", "艾欧尼亚");
     return true;
 }
 

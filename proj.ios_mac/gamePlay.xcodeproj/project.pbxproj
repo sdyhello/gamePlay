@@ -59,6 +59,17 @@
 		521A8EA919F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
+		61935C3A1C168BED0077685C /* libTalkingDataGA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61935C331C168BED0077685C /* libTalkingDataGA.a */; };
+		61935C3B1C168BED0077685C /* TDCCAccount.mm in Sources */ = {isa = PBXBuildFile; fileRef = 61935C351C168BED0077685C /* TDCCAccount.mm */; };
+		61935C3C1C168BED0077685C /* TDCCItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = 61935C361C168BED0077685C /* TDCCItem.mm */; };
+		61935C3D1C168BED0077685C /* TDCCMission.mm in Sources */ = {isa = PBXBuildFile; fileRef = 61935C371C168BED0077685C /* TDCCMission.mm */; };
+		61935C3E1C168BED0077685C /* TDCCTalkingDataGA.mm in Sources */ = {isa = PBXBuildFile; fileRef = 61935C381C168BED0077685C /* TDCCTalkingDataGA.mm */; };
+		61935C3F1C168BED0077685C /* TDCCVirtualCurrency.mm in Sources */ = {isa = PBXBuildFile; fileRef = 61935C391C168BED0077685C /* TDCCVirtualCurrency.mm */; };
+		61935C411C168CC90077685C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61935C401C168CC90077685C /* AdSupport.framework */; };
+		61935C431C168CDA0077685C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61935C421C168CDA0077685C /* CoreTelephony.framework */; };
+		61935C451C168CE10077685C /* lazydylib1.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 61935C441C168CE10077685C /* lazydylib1.o */; };
+		61935C471C168CF00077685C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61935C461C168CF00077685C /* SystemConfiguration.framework */; };
+		61935C491C168CFD0077685C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61935C481C168CFD0077685C /* Security.framework */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -153,6 +164,24 @@
 		521A8E6319F0C34300D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		61935C2C1C168BED0077685C /* TalkingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkingData.h; sourceTree = "<group>"; };
+		61935C2D1C168BED0077685C /* TDCCAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDCCAccount.h; sourceTree = "<group>"; };
+		61935C2E1C168BED0077685C /* TDCCItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDCCItem.h; sourceTree = "<group>"; };
+		61935C2F1C168BED0077685C /* TDCCMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDCCMission.h; sourceTree = "<group>"; };
+		61935C301C168BED0077685C /* TDCCTalkingDataGA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDCCTalkingDataGA.h; sourceTree = "<group>"; };
+		61935C311C168BED0077685C /* TDCCVirtualCurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDCCVirtualCurrency.h; sourceTree = "<group>"; };
+		61935C331C168BED0077685C /* libTalkingDataGA.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTalkingDataGA.a; sourceTree = "<group>"; };
+		61935C341C168BED0077685C /* TalkingDataGA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkingDataGA.h; sourceTree = "<group>"; };
+		61935C351C168BED0077685C /* TDCCAccount.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TDCCAccount.mm; sourceTree = "<group>"; };
+		61935C361C168BED0077685C /* TDCCItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TDCCItem.mm; sourceTree = "<group>"; };
+		61935C371C168BED0077685C /* TDCCMission.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TDCCMission.mm; sourceTree = "<group>"; };
+		61935C381C168BED0077685C /* TDCCTalkingDataGA.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TDCCTalkingDataGA.mm; sourceTree = "<group>"; };
+		61935C391C168BED0077685C /* TDCCVirtualCurrency.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TDCCVirtualCurrency.mm; sourceTree = "<group>"; };
+		61935C401C168CC90077685C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/System/Library/Frameworks/AdSupport.framework; sourceTree = DEVELOPER_DIR; };
+		61935C421C168CDA0077685C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
+		61935C441C168CE10077685C /* lazydylib1.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = lazydylib1.o; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/usr/lib/lazydylib1.o; sourceTree = DEVELOPER_DIR; };
+		61935C461C168CF00077685C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		61935C481C168CFD0077685C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -170,8 +199,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61935C491C168CFD0077685C /* Security.framework in Frameworks */,
+				61935C471C168CF00077685C /* SystemConfiguration.framework in Frameworks */,
+				61935C451C168CE10077685C /* lazydylib1.o in Frameworks */,
+				61935C431C168CDA0077685C /* CoreTelephony.framework in Frameworks */,
+				61935C411C168CC90077685C /* AdSupport.framework in Frameworks */,
 				ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */,
 				52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */,
+				61935C3A1C168BED0077685C /* libTalkingDataGA.a in Frameworks */,
 				1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */,
 				D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
@@ -244,6 +279,8 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				61935C2B1C168BED0077685C /* include */,
+				61935C321C168BED0077685C /* ios */,
 				46880B8319C43A87006E1F66 /* Classes */,
 				46880B7519C43A67006E1F66 /* Resources */,
 				1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */,
@@ -258,6 +295,11 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61935C481C168CFD0077685C /* Security.framework */,
+				61935C461C168CF00077685C /* SystemConfiguration.framework */,
+				61935C441C168CE10077685C /* lazydylib1.o */,
+				61935C421C168CDA0077685C /* CoreTelephony.framework */,
+				61935C401C168CC90077685C /* AdSupport.framework */,
 				ED545A7D1B68A1FA00C3958E /* libiconv.dylib */,
 				ED545A7B1B68A1F400C3958E /* libiconv.dylib */,
 				8262943D1AAF051F00CB7CF7 /* Security.framework */,
@@ -352,6 +394,35 @@
 			name = Icons;
 			path = ios;
 			sourceTree = SOURCE_ROOT;
+		};
+		61935C2B1C168BED0077685C /* include */ = {
+			isa = PBXGroup;
+			children = (
+				61935C2C1C168BED0077685C /* TalkingData.h */,
+				61935C2D1C168BED0077685C /* TDCCAccount.h */,
+				61935C2E1C168BED0077685C /* TDCCItem.h */,
+				61935C2F1C168BED0077685C /* TDCCMission.h */,
+				61935C301C168BED0077685C /* TDCCTalkingDataGA.h */,
+				61935C311C168BED0077685C /* TDCCVirtualCurrency.h */,
+			);
+			name = include;
+			path = ../cocos2d/external/TalkingDataGameAnalytics/include;
+			sourceTree = "<group>";
+		};
+		61935C321C168BED0077685C /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				61935C331C168BED0077685C /* libTalkingDataGA.a */,
+				61935C341C168BED0077685C /* TalkingDataGA.h */,
+				61935C351C168BED0077685C /* TDCCAccount.mm */,
+				61935C361C168BED0077685C /* TDCCItem.mm */,
+				61935C371C168BED0077685C /* TDCCMission.mm */,
+				61935C381C168BED0077685C /* TDCCTalkingDataGA.mm */,
+				61935C391C168BED0077685C /* TDCCVirtualCurrency.mm */,
+			);
+			name = ios;
+			path = ../cocos2d/external/TalkingDataGameAnalytics/ios;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -497,7 +568,12 @@
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				61935C3B1C168BED0077685C /* TDCCAccount.mm in Sources */,
+				61935C3C1C168BED0077685C /* TDCCItem.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				61935C3F1C168BED0077685C /* TDCCVirtualCurrency.mm in Sources */,
+				61935C3D1C168BED0077685C /* TDCCMission.mm in Sources */,
+				61935C3E1C168BED0077685C /* TDCCTalkingDataGA.mm in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,7 +629,7 @@
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../cocos2d/external/TalkingDataGameAnalytics/ios";
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
@@ -588,7 +664,7 @@
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../cocos2d/external/TalkingDataGameAnalytics/ios";
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
