@@ -37,8 +37,6 @@ bool HelloWorld::init()
     if (node != nullptr) {
         this->addChild(node);
     }
-
-    //auto nodeLoaderLibrary = NodeLoderLibrary
     return true;
 }
 
