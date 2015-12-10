@@ -59,6 +59,7 @@
 		521A8EA919F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
+		61016EBC1C19B31700AA13A8 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61016EBB1C19B31700AA13A8 /* GoogleMobileAds.framework */; };
 		615E644B1C16B7CE0061EBF9 /* OPTestLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 615E64491C16B7CE0061EBF9 /* OPTestLayer.cpp */; };
 		615E64731C16F62C0061EBF9 /* MainScene.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 615E64721C16F62C0061EBF9 /* MainScene.ccbi */; };
 		615E64A71C16F9760061EBF9 /* ccbDefaultImages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 615E64931C16F9760061EBF9 /* ccbDefaultImages.plist */; };
@@ -88,6 +89,11 @@
 		61935C451C168CE10077685C /* lazydylib1.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 61935C441C168CE10077685C /* lazydylib1.o */; };
 		61935C471C168CF00077685C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61935C461C168CF00077685C /* SystemConfiguration.framework */; };
 		61935C491C168CFD0077685C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61935C481C168CFD0077685C /* Security.framework */; };
+		61D83BA81C19B09E001E3A1A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D83BA71C19B09E001E3A1A /* CoreMedia.framework */; };
+		61D83BAA1C19B0AC001E3A1A /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D83BA91C19B0AC001E3A1A /* EventKit.framework */; };
+		61D83BAC1C19B0B5001E3A1A /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D83BAB1C19B0B5001E3A1A /* EventKitUI.framework */; };
+		61D83BAE1C19B0CF001E3A1A /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D83BAD1C19B0CF001E3A1A /* MessageUI.framework */; };
+		61D83BB01C19B0DE001E3A1A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D83BAF1C19B0DE001E3A1A /* StoreKit.framework */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -182,6 +188,7 @@
 		521A8E6319F0C34300D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		61016EBB1C19B31700AA13A8 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		615E64491C16B7CE0061EBF9 /* OPTestLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OPTestLayer.cpp; sourceTree = "<group>"; };
 		615E644A1C16B7CE0061EBF9 /* OPTestLayer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = OPTestLayer.h; sourceTree = "<group>"; };
 		615E644C1C16B9FD0061EBF9 /* OPTestLayerLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPTestLayerLoader.h; sourceTree = "<group>"; };
@@ -220,6 +227,11 @@
 		61935C441C168CE10077685C /* lazydylib1.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = lazydylib1.o; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/usr/lib/lazydylib1.o; sourceTree = DEVELOPER_DIR; };
 		61935C461C168CF00077685C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		61935C481C168CFD0077685C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		61D83BA71C19B09E001E3A1A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		61D83BA91C19B0AC001E3A1A /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/System/Library/Frameworks/EventKit.framework; sourceTree = DEVELOPER_DIR; };
+		61D83BAB1C19B0B5001E3A1A /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/System/Library/Frameworks/EventKitUI.framework; sourceTree = DEVELOPER_DIR; };
+		61D83BAD1C19B0CF001E3A1A /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
+		61D83BAF1C19B0DE001E3A1A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -237,6 +249,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61D83BB01C19B0DE001E3A1A /* StoreKit.framework in Frameworks */,
+				61D83BAE1C19B0CF001E3A1A /* MessageUI.framework in Frameworks */,
+				61D83BAC1C19B0B5001E3A1A /* EventKitUI.framework in Frameworks */,
+				61D83BAA1C19B0AC001E3A1A /* EventKit.framework in Frameworks */,
+				61D83BA81C19B09E001E3A1A /* CoreMedia.framework in Frameworks */,
 				61935C491C168CFD0077685C /* Security.framework in Frameworks */,
 				61935C471C168CF00077685C /* SystemConfiguration.framework in Frameworks */,
 				61935C451C168CE10077685C /* lazydylib1.o in Frameworks */,
@@ -254,6 +271,7 @@
 				BF1712471292920000B8313A /* libz.dylib in Frameworks */,
 				BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */,
 				D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */,
+				61016EBC1C19B31700AA13A8 /* GoogleMobileAds.framework in Frameworks */,
 				D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */,
 				D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */,
 			);
@@ -317,6 +335,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				61016EBB1C19B31700AA13A8 /* GoogleMobileAds.framework */,
 				61935C2B1C168BED0077685C /* include */,
 				61935C321C168BED0077685C /* ios */,
 				46880B8319C43A87006E1F66 /* Classes */,
@@ -333,6 +352,11 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61D83BAF1C19B0DE001E3A1A /* StoreKit.framework */,
+				61D83BAD1C19B0CF001E3A1A /* MessageUI.framework */,
+				61D83BAB1C19B0B5001E3A1A /* EventKitUI.framework */,
+				61D83BA91C19B0AC001E3A1A /* EventKit.framework */,
+				61D83BA71C19B09E001E3A1A /* CoreMedia.framework */,
 				61935C481C168CFD0077685C /* Security.framework */,
 				61935C461C168CF00077685C /* SystemConfiguration.framework */,
 				61935C441C168CE10077685C /* lazydylib1.o */,
@@ -744,6 +768,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -781,6 +809,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;
