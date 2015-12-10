@@ -27,7 +27,7 @@
 #import "cocos2d.h"
 #import "AppDelegate.h"
 #import "RootViewController.h"
-
+#define GAD_SIMULATOR_ID @"Simulator"
 @implementation AppController
 
 #pragma mark -
@@ -80,6 +80,19 @@ static AppDelegate s_sharedApplication;
 
     [[UIApplication sharedApplication] setStatusBarHidden:true];
 
+    
+    /////////admob start ////////
+    CGPoint origin = CGPointMake(0.0,
+                                 viewController.view.frame.size.height - kGADAdSizeBanner.size.height);
+    self.adBanner = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner origin:origin];
+    
+    self.adBanner.adUnitID = @"ca-app-pub-3940256099942544/2934735716";
+    self.adBanner.delegate = self;
+    self.adBanner.rootViewController = viewController;
+    [viewController.view addSubview:self.adBanner];
+    [self.adBanner loadRequest:[self request]];
+    /////////admob end ////////
+    
     // IMPORTANT: Setting the GLView should be done after creating the RootViewController
     cocos2d::GLView *glview = cocos2d::GLViewImpl::createWithEAGLView(eaglView);
     cocos2d::Director::getInstance()->setOpenGLView(glview);
@@ -145,5 +158,31 @@ static AppDelegate s_sharedApplication;
     [super dealloc];
 }
 
+#pragma mark GADRequest generation
+
+- (GADRequest *)request {
+    GADRequest *request = [GADRequest request];
+    
+    // Make the request for a test ad. Put in an identifier for the simulator as well as any devices
+    // you want to receive test ads.
+    request.testDevices = @[
+                            // TODO: Add your device/simulator test identifiers here. Your device identifier is printed to
+                            // the console when the app is launched.
+                            @"7740674c81cf31a50d2f92bcdb729f10",
+                            GAD_SIMULATOR_ID
+                            ];
+    return request;
+}
+
+#pragma mark GADBannerViewDelegate implementation
+
+// We've received an ad successfully.
+- (void)adViewDidReceiveAd:(GADBannerView *)adView {
+    NSLog(@"Received ad successfully");
+}
+
+- (void)adView:(GADBannerView *)view didFailToReceiveAdWithError:(GADRequestError *)error {
+    NSLog(@"Failed to receive ad with error: %@", [error localizedFailureReason]);
+}
 
 @end
