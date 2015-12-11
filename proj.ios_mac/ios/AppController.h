@@ -8,7 +8,7 @@
     RootViewController    *viewController;
 }
 
-@property(nonatomic, strong) GADBannerView *adBanner;
+@property(nonatomic, strong) IBOutlet GADBannerView *adBanner;
 
 @property(nonatomic, readonly) RootViewController* viewController;
 

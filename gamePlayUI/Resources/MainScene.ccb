@@ -5,7 +5,7 @@
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
-	<integer>0</integer>
+	<integer>2</integer>
 	<key>currentSequenceId</key>
 	<integer>0</integer>
 	<key>fileType</key>
@@ -39,14 +39,26 @@
 				<array>
 					<dict>
 						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>0.0</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>contentSize</string>
 						<key>type</key>
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>100</real>
-							<real>100</real>
-							<integer>1</integer>
+							<real>640</real>
+							<real>1136</real>
+							<integer>0</integer>
 						</array>
 					</dict>
 					<dict>
@@ -471,9 +483,9 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>239</real>
-							<real>22</real>
-							<integer>0</integer>
+							<real>49.0625</real>
+							<real>8.75</real>
+							<integer>4</integer>
 						</array>
 					</dict>
 					<dict>
@@ -677,9 +689,9 @@
 				<string>Size</string>
 				<key>value</key>
 				<array>
-					<real>100</real>
-					<real>100</real>
-					<integer>1</integer>
+					<real>640</real>
+					<real>1136</real>
+					<integer>0</integer>
 				</array>
 			</dict>
 			<dict>
@@ -767,6 +779,20 @@
 			<real>1</real>
 			<key>width</key>
 			<integer>1136</integer>
+		</dict>
+		<dict>
+			<key>centeredOrigin</key>
+			<false/>
+			<key>ext</key>
+			<string>iphone</string>
+			<key>height</key>
+			<integer>1136</integer>
+			<key>name</key>
+			<string>iPhone Portrait</string>
+			<key>scale</key>
+			<real>1</real>
+			<key>width</key>
+			<integer>640</integer>
 		</dict>
 	</array>
 	<key>sequences</key>
