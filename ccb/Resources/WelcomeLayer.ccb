@@ -165,7 +165,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>-12.44160270690918</real>
+									<real>-37.324806213378906</real>
 									<real>120.26882171630859</real>
 									<integer>0</integer>
 								</array>
@@ -229,7 +229,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string></string>
+									<string>clickme.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -342,7 +342,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string></string>
+									<string>clickme.png</string>
 								</array>
 							</dict>
 							<dict>

@@ -2,6 +2,8 @@
 #include "cocosbuilder/CocosBuilder.h"
 #include "OPTestLayer.h"
 #include "OPTestLayerLoader.h"
+#include "WelcomeLayer.h"
+#include "WelcomeLayerLoader.h"
 USING_NS_CC;
 using namespace cocosbuilder;
 Scene* HelloWorld::createScene()
@@ -24,13 +26,13 @@ bool HelloWorld::init()
 {
     auto nodeLoaderLibrary = NodeLoaderLibrary::newDefaultNodeLoaderLibrary();
     
-    nodeLoaderLibrary->registerNodeLoader("OPTestLayer", OPTestLayerLoader::loader());
+    nodeLoaderLibrary->registerNodeLoader("WelcomeLayer", WelcomeLayerLoader::loader());
     
     /* Create an autorelease CCBReader. */
     cocosbuilder::CCBReader * ccbReader = new cocosbuilder::CCBReader(nodeLoaderLibrary);
     
     /* Read a ccbi file. */
-    auto node = ccbReader->readNodeGraphFromFile("MainScene.ccbi", this);
+    auto node = ccbReader->readNodeGraphFromFile("WelcomeLayer.ccbi", this);
     
     ccbReader->release();
     

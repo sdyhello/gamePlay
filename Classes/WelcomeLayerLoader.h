@@ -12,7 +12,7 @@
 #include "cocosbuilder/CocosBuilder.h"
 #include "WelcomeLayer.h"
 
-class WelcomeLayerLoader : public cocosbuilder::CCLayerLoader
+class WelcomeLayerLoader : public cocosbuilder::LayerLoader
 {
 public:
     CCB_STATIC_NEW_AUTORELEASE_OBJECT_METHOD(WelcomeLayerLoader, loader)
