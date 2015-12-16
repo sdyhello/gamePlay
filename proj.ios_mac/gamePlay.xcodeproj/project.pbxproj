@@ -100,6 +100,7 @@
 		61E19A6D1C215F1D0059381D /* Marker Felt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 61E19A4E1C215F1D0059381D /* Marker Felt.ttf */; };
 		61E19A6E1C215F1D0059381D /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E19A4F1C215F1D0059381D /* HelloWorld.png */; };
 		61E19A6F1C215F1D0059381D /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 61E19A511C215F1D0059381D /* .gitkeep */; };
+		61E19A791C219AE00059381D /* GameLogic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61E19A771C219AE00059381D /* GameLogic.cpp */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -254,6 +255,8 @@
 		61E19A4E1C215F1D0059381D /* Marker Felt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Marker Felt.ttf"; sourceTree = "<group>"; };
 		61E19A4F1C215F1D0059381D /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
 		61E19A511C215F1D0059381D /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		61E19A771C219AE00059381D /* GameLogic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameLogic.cpp; sourceTree = "<group>"; };
+		61E19A781C219AE00059381D /* GameLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLogic.h; sourceTree = "<group>"; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -524,6 +527,8 @@
 		61DA10B31C1AC78000DAA76D /* gameLogic */ = {
 			isa = PBXGroup;
 			children = (
+				61E19A771C219AE00059381D /* GameLogic.cpp */,
+				61E19A781C219AE00059381D /* GameLogic.h */,
 			);
 			name = gameLogic;
 			sourceTree = "<group>";
@@ -829,6 +834,7 @@
 				61935C3D1C168BED0077685C /* TDCCMission.mm in Sources */,
 				61935C3E1C168BED0077685C /* TDCCTalkingDataGA.mm in Sources */,
 				61DA10B61C1AC7AD00DAA76D /* WelcomeLayer.cpp in Sources */,
+				61E19A791C219AE00059381D /* GameLogic.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

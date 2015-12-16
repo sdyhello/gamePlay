@@ -86,7 +86,11 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // run
     director->runWithScene(scene);
-    TDCCTalkingDataGA::onStart("BD6757D9C98331C75784E0FDEA8B3299", "艾欧尼亚");
+    TDCCTalkingDataGA::onStart("BD6757D9C98331C75784E0FDEA8B3299", "电信一区");
+//    
+//    EventParamMap paramMap;
+//    paramMap.insert(EventParamPair("level ", "50-60"));
+    TDCCTalkingDataGA::onEvent("onStart");
     return true;
 }
 
