@@ -12,9 +12,10 @@ static cocos2d::Size mediumResolutionSize = cocos2d::Size(1024, 768);
 static cocos2d::Size largeResolutionSize = cocos2d::Size(2048, 1536);
 
 AppDelegate::AppDelegate() {
-    vector<string> searchPath;
-    searchPath.push_back("ccb");
-    FileUtils::getInstance()->setSearchPaths(searchPath);
+//    vector<string> searchPath;
+//    searchPath.push_back("ccb");
+//    searchPath.push_back("ccb/ccbResources");
+//    FileUtils::getInstance()->setSearchPaths(searchPath);
 }
 
 AppDelegate::~AppDelegate() 

@@ -7,9 +7,9 @@
 	<key>deviceOrientationLandscapeRight</key>
 	<true/>
 	<key>deviceOrientationPortrait</key>
-	<false/>
+	<true/>
 	<key>deviceOrientationUpsideDown</key>
-	<false/>
+	<true/>
 	<key>exporter</key>
 	<string>ccbi</string>
 	<key>fileType</key>
@@ -25,11 +25,11 @@
 	<key>javascriptMainCCB</key>
 	<string>MainScene</string>
 	<key>needRepublish</key>
-	<true/>
+	<false/>
 	<key>onlyPublishCCBs</key>
 	<true/>
 	<key>publishDirectory</key>
-	<string>../Resources/ccb</string>
+	<string>../Resources</string>
 	<key>publishDirectoryAndroid</key>
 	<string>Published-Android</string>
 	<key>publishDirectoryHTML5</key>
