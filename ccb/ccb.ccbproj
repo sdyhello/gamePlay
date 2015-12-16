@@ -29,7 +29,7 @@
 	<key>onlyPublishCCBs</key>
 	<true/>
 	<key>publishDirectory</key>
-	<string>../Resources/ccb</string>
+	<string>../proj.ios_mac/Resources/ccb</string>
 	<key>publishDirectoryAndroid</key>
 	<string>Published-Android</string>
 	<key>publishDirectoryHTML5</key>
