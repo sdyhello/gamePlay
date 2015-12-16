@@ -17,5 +17,5 @@ int GameLogic::getNum(int index)
     if (index < numTable.size()) {
         return numTable[index];
     }
-    return 0;
+    return -1;
 }

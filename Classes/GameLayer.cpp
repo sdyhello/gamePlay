@@ -41,6 +41,9 @@ Control::Handler GameLayer::onResolveCCBCCControlSelector(Ref * pTarget, const c
 void GameLayer::schedUpdate(float dt)
 {
     int num = gmLogic->getNum(curPos++);
+    if (num == -1) {
+        return;
+    }
     auto  pSeq = Sequence::create(Show::create(), DelayTime::create(1), Hide::create(), NULL);
     sprite_table[num]->runAction(pSeq);
 
@@ -49,9 +52,9 @@ void GameLayer::onPressExit(cocos2d::Ref * sender, cocos2d::extension::Control::
 {
     curPos = 0;
     gmLogic = new GameLogic();
+    gmLogic->addNum(0);
     gmLogic->addNum(1);
     gmLogic->addNum(2);
-    gmLogic->addNum(3);
-    this->schedule(CC_SCHEDULE_SELECTOR(GameLayer::schedUpdate), 2, 3 , 3.f);
+    this->schedule(CC_SCHEDULE_SELECTOR(GameLayer::schedUpdate), 2, 2 , 3.f);
     //this->removeFromParent();
 }
