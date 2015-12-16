@@ -23,7 +23,7 @@ public:
     virtual cocos2d::SEL_MenuHandler onResolveCCBCCMenuItemSelector(cocos2d::Ref *pTarget, const char * pSelectName);
     virtual cocos2d::extension::Control::Handler onResolveCCBCCControlSelector(cocos2d::Ref *pTarget,const char
                                                                                *pSelectName);
-    void onPressBtn(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent);
+    void onPressExit(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent);
 private:
     cocos2d::Label * title;
     cocos2d::Node * button;
