@@ -12,6 +12,7 @@
 USING_NS_CC;
 USING_NS_CC_EXT;
 using namespace cocosbuilder;
+
 bool WelcomeLayer::onAssignCCBMemberVariable(cocos2d::Ref *pTarget, const char * pMemberVariableName, cocos2d::Node *pNode)
 {
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "title", Label *, this->title);
@@ -32,6 +33,7 @@ Control::Handler WelcomeLayer::onResolveCCBCCControlSelector(Ref * pTarget, cons
 
 void WelcomeLayer::onMenuItemStart(cocos2d::Ref * sender)
 {
+    
     auto nodeLoaderLibrary = NodeLoaderLibrary::newDefaultNodeLoaderLibrary();
     
     nodeLoaderLibrary->registerNodeLoader("GameLayer", GameLayerLoader::loader());
@@ -45,12 +47,13 @@ void WelcomeLayer::onMenuItemStart(cocos2d::Ref * sender)
     if (node != nullptr) {
         this->addChild(node);
     }
-
+    TDCCTalkingDataGA::onEvent("newGame");
 }
 
 void WelcomeLayer::onHelp(cocos2d::Ref *sender, cocos2d::extension::Control::EventType pControlEvent)
 {
     std::cout<<"on help"<<std::endl;
+    TDCCTalkingDataGA::onEvent("help");
     this->title->setString("on help");
 }
 

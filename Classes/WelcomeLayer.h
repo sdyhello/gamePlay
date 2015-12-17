@@ -12,6 +12,7 @@
 #include "cocos2d.h"
 #include "extensions/cocos-ext.h"
 #include "cocosbuilder/CocosBuilder.h"
+#include "TalkingData.h"
 class WelcomeLayer
     : public cocos2d::Layer
     , public cocosbuilder::CCBMemberVariableAssigner

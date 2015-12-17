@@ -21,15 +21,28 @@ class GameLayer
     , public cocosbuilder::CCBSelectorResolver
 {
 public:
+    GameLayer();
     CCB_STATIC_NEW_AUTORELEASE_OBJECT_WITH_INIT_METHOD(GameLayer, create);
     virtual bool onAssignCCBMemberVariable(cocos2d::Ref *pTarget, const char * pMemberiableName, cocos2d::Node *node);
     virtual cocos2d::SEL_MenuHandler onResolveCCBCCMenuItemSelector(cocos2d::Ref *pTarget, const char * pSelectName);
     virtual cocos2d::extension::Control::Handler onResolveCCBCCControlSelector(cocos2d::Ref *pTarget,const char
                                                                                *pSelectName);
     void onPressExit(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent);
+    void onPressMagicBtn_1(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent);
+    void onPressMagicBtn_2(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent);
+    void onPressMagicBtn_3(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent);
+    void onPressMagicBtn_4(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent);
+    void onPressMagicBtn_5(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent);
+    void onPressMagicBtn_6(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent);
+    void onPressMagicBtn_7(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent);
+    void onPressMagicBtn_8(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent);
+    void onPressMagicBtn_9(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent);
     void schedUpdate(float dt);
+    void TrigerAutoShow();
+    void tapMagicBtn(int num);
 private:
     cocos2d::Label * title;
+    cocos2d::Label * labScore;
     cocos2d::extension::ControlButton * m_pButton;
     cocos2d::Node * node_1;
     Scale9Sprite * sprite_table[9];

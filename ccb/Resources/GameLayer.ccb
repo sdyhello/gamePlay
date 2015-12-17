@@ -49,8 +49,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>98</real>
-									<real>1086</real>
+									<real>148</real>
+									<real>632</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -61,8 +61,8 @@
 								<string>Point</string>
 								<key>value</key>
 								<array>
-									<real>0.5</real>
-									<real>0.5</real>
+									<real>0.53427606821060181</real>
+									<real>0.40889617800712585</real>
 								</array>
 							</dict>
 							<dict>
@@ -165,9 +165,9 @@
 						<key>displayName</key>
 						<string>CCLabelTTF</string>
 						<key>memberVarAssignmentName</key>
-						<string></string>
+						<string>m_pScore</string>
 						<key>memberVarAssignmentType</key>
-						<integer>0</integer>
+						<integer>1</integer>
 						<key>properties</key>
 						<array>
 							<dict>
@@ -177,8 +177,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>150</real>
-									<real>1086</real>
+									<real>200</real>
+									<real>632</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -279,9 +279,11 @@
 								<key>type</key>
 								<string>Text</string>
 								<key>value</key>
-								<string>23333</string>
+								<string>0</string>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -682,7 +684,7 @@
 								<string>BlockCCControl</string>
 								<key>value</key>
 								<array>
-									<string>onPressBtn</string>
+									<string>onPressBtn_1</string>
 									<integer>1</integer>
 									<integer>32</integer>
 								</array>
@@ -986,8 +988,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>155</real>
-							<real>453</real>
+							<real>127</real>
+							<real>454</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1104,7 +1106,7 @@
 								<string>BlockCCControl</string>
 								<key>value</key>
 								<array>
-									<string>onPressBtn</string>
+									<string>onPressBtn_2</string>
 									<integer>1</integer>
 									<integer>32</integer>
 								</array>
@@ -1408,8 +1410,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>279</real>
-							<real>448</real>
+							<real>281</real>
+							<real>453</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1526,7 +1528,7 @@
 								<string>BlockCCControl</string>
 								<key>value</key>
 								<array>
-									<string>onPressBtn</string>
+									<string>onPressBtn_3</string>
 									<integer>1</integer>
 									<integer>32</integer>
 								</array>
@@ -1830,8 +1832,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>431</real>
-							<real>450</real>
+							<real>436</real>
+							<real>451</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1948,7 +1950,7 @@
 								<string>BlockCCControl</string>
 								<key>value</key>
 								<array>
-									<string>onPressBtn</string>
+									<string>onPressBtn_4</string>
 									<integer>1</integer>
 									<integer>32</integer>
 								</array>
@@ -2252,8 +2254,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>153</real>
-							<real>338</real>
+							<real>122</real>
+							<real>331</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2370,7 +2372,7 @@
 								<string>BlockCCControl</string>
 								<key>value</key>
 								<array>
-									<string>onPressBtn</string>
+									<string>onPressBtn_5</string>
 									<integer>1</integer>
 									<integer>32</integer>
 								</array>
@@ -2792,7 +2794,7 @@
 								<string>BlockCCControl</string>
 								<key>value</key>
 								<array>
-									<string>onPressBtn</string>
+									<string>onPressBtn_6</string>
 									<integer>1</integer>
 									<integer>32</integer>
 								</array>
@@ -3096,8 +3098,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>424</real>
-							<real>340</real>
+							<real>436</real>
+							<real>339</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -3214,7 +3216,7 @@
 								<string>BlockCCControl</string>
 								<key>value</key>
 								<array>
-									<string>onPressBtn</string>
+									<string>onPressBtn_7</string>
 									<integer>1</integer>
 									<integer>32</integer>
 								</array>
@@ -3518,8 +3520,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>157</real>
-							<real>213</real>
+							<real>122</real>
+							<real>215</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -3636,7 +3638,7 @@
 								<string>BlockCCControl</string>
 								<key>value</key>
 								<array>
-									<string>onPressBtn</string>
+									<string>onPressBtn_8</string>
 									<integer>1</integer>
 									<integer>32</integer>
 								</array>
@@ -3940,8 +3942,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>286</real>
-							<real>215</real>
+							<real>282</real>
+							<real>213</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -4058,7 +4060,7 @@
 								<string>BlockCCControl</string>
 								<key>value</key>
 								<array>
-									<string>onPressBtn</string>
+									<string>onPressBtn_9</string>
 									<integer>1</integer>
 									<integer>32</integer>
 								</array>
@@ -4362,7 +4364,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>427</real>
+							<real>440</real>
 							<real>215</real>
 							<integer>0</integer>
 						</array>
