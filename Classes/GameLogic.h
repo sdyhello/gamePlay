@@ -22,6 +22,7 @@ public:
     int trigerOneBtn(int num);
     void addScore(int num);
     int getScore();
+    string getNumberString();
 private:
     vector<int> numTable;
     int curPosition;

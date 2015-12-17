@@ -13,7 +13,9 @@
 #include "extensions/cocos-ext.h"
 #include "cocosbuilder/CocosBuilder.h"
 #include "GameLogic.h"
+#include "TalkingData.h"
 #include <vector>
+
 using namespace cocos2d::ui;
 class GameLayer
     : public cocos2d::Layer
@@ -37,15 +39,19 @@ public:
     void onPressMagicBtn_7(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent);
     void onPressMagicBtn_8(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent);
     void onPressMagicBtn_9(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent);
+    
     void schedUpdate(float dt);
     void TrigerAutoShow();
     void tapMagicBtn(int num);
+    void disableAllButton();
+    void ableAllButton();
 private:
     cocos2d::Label * title;
     cocos2d::Label * labScore;
     cocos2d::extension::ControlButton * m_pButton;
     cocos2d::Node * node_1;
     Scale9Sprite * sprite_table[9];
+    cocos2d::extension::ControlButton * button_table[9];
     GameLogic * gmLogic;
     int curPos;
     float updateTime;

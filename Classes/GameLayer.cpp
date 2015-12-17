@@ -16,8 +16,8 @@ using namespace cocos2d::ui;
 using namespace std;
 using namespace cocosbuilder;
 GameLayer::GameLayer()
+: gmLogic (new GameLogic())
 {
-    gmLogic = new GameLogic();
     gmLogic->createNextNum();
     TrigerAutoShow();
 }
@@ -33,6 +33,16 @@ bool GameLayer::onAssignCCBMemberVariable(cocos2d::Ref *pTarget, const char * pM
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "sprite_8", Scale9Sprite *, sprite_table[7]);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "sprite_9", Scale9Sprite *, sprite_table[8]);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pScore", Label *, labScore);
+    
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pButton_1", ControlButton *, button_table[0]);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pButton_2", ControlButton *, button_table[1]);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pButton_3", ControlButton *, button_table[2]);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pButton_4", ControlButton *, button_table[3]);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pButton_5", ControlButton *, button_table[4]);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pButton_6", ControlButton *, button_table[5]);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pButton_7", ControlButton *, button_table[6]);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pButton_8", ControlButton *, button_table[7]);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pButton_9", ControlButton *, button_table[8]);
     return false;
 }
 
@@ -93,6 +103,18 @@ void GameLayer::onPressMagicBtn_9(cocos2d::Ref * sender, cocos2d::extension::Con
     tapMagicBtn(9);
 }
 
+void GameLayer::disableAllButton()
+{
+    for (int i = 0; i < 9; i++) {
+        button_table[i]->setEnabled(false);
+    }
+}
+void GameLayer::ableAllButton()
+{
+    for (int i = 0; i < 9; i++) {
+        button_table[i]->setEnabled(true);
+    }
+}
 void GameLayer::tapMagicBtn(int num)
 {
     int status = gmLogic->trigerOneBtn(num - 1);
@@ -110,6 +132,12 @@ void GameLayer::tapMagicBtn(int num)
         if (node != nullptr) {
             this->addChild(node);
         }
+        EventParamMap paramMap;
+        char scoreStr[10];
+        sprintf(scoreStr, "%d", gmLogic->getScore());
+        paramMap.insert(EventParamPair("score", scoreStr));
+        paramMap.insert(EventParamPair("score_str", gmLogic->getNumberString()));
+        TDCCTalkingDataGA::onEvent("onEnd", &paramMap);
     }
     else if (status == 1)
     {
@@ -131,7 +159,7 @@ void GameLayer::schedUpdate(float dt)
     if (num == -1) {
         return;
     }
-    auto  pSeq = Sequence::create(Show::create(), DelayTime::create(1), Hide::create(), DelayTime::create(1), NULL);
+    auto  pSeq = Sequence::create(Show::create(), DelayTime::create(1), Hide::create(), DelayTime::create(0.5), NULL);
     sprite_table[num]->runAction(pSeq);
 
 }
@@ -139,9 +167,10 @@ void GameLayer::TrigerAutoShow()
 {
     curPos = 0;
     int numCount = gmLogic->getNumCount();
-    this->schedule(CC_SCHEDULE_SELECTOR(GameLayer::schedUpdate), 1, numCount , 1.f);
+    this->schedule(CC_SCHEDULE_SELECTOR(GameLayer::schedUpdate), 1.5, numCount, 1.f);
+    
 }
 void GameLayer::onPressExit(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent)
 {
-    this->removeFromParent();
+    //this->removeFromParent();
 }

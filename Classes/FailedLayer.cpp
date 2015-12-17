@@ -20,7 +20,6 @@ SEL_MenuHandler FailedLayer::onResolveCCBCCMenuItemSelector(Ref * pTarget, const
     return nullptr;
 }
 
-//普通按钮
 Control::Handler FailedLayer::onResolveCCBCCControlSelector(Ref * pTarget, const char * pSelectorName) {
     CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "onPressExit", FailedLayer::onPressExit);
     return nullptr;
@@ -30,4 +29,3 @@ void FailedLayer::onPressExit(cocos2d::Ref * sender, cocos2d::extension::Control
 {
     this->getParent()->removeFromParent();
 }
-

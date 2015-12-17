@@ -48,6 +48,18 @@ void GameLogic::createNextNum()
     addNum(newNum);
 }
 
+string GameLogic::getNumberString()
+{
+    string numberString;
+    char tempStr[10];
+    for (vector<int>::iterator iter = numTable.begin(); iter != numTable.end(); iter++) {
+        sprintf(tempStr, "%d", *iter+1);
+        string numStr(tempStr);
+        numberString+=numStr;
+    }
+    return numberString;
+}
+
 int GameLogic::trigerOneBtn(int num)
 {
     if (curPosition < numTable.size()) {
@@ -75,3 +87,4 @@ int GameLogic::getScore()
 {
     return score;
 }
+
