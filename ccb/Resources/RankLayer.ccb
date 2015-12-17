@@ -250,7 +250,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>Sample Text</string>
+						<string></string>
 					</dict>
 				</array>
 			</dict>
@@ -366,7 +366,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>Sample Text</string>
+						<string></string>
 					</dict>
 				</array>
 			</dict>
@@ -482,7 +482,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>Sample Text</string>
+						<string></string>
 					</dict>
 				</array>
 			</dict>
@@ -598,7 +598,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>Sample Text</string>
+						<string></string>
 					</dict>
 				</array>
 			</dict>
@@ -714,7 +714,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>Sample Text</string>
+						<string></string>
 					</dict>
 				</array>
 			</dict>
@@ -830,7 +830,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>Sample Text</string>
+						<string></string>
 					</dict>
 				</array>
 			</dict>
@@ -946,7 +946,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>Sample Text</string>
+						<string></string>
 					</dict>
 				</array>
 			</dict>
@@ -1062,7 +1062,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>Sample Text</string>
+						<string></string>
 					</dict>
 				</array>
 			</dict>
@@ -1178,7 +1178,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>Sample Text</string>
+						<string></string>
 					</dict>
 				</array>
 			</dict>
@@ -1294,7 +1294,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>Sample Text</string>
+						<string></string>
 					</dict>
 				</array>
 			</dict>
