@@ -10,6 +10,7 @@
 #include "GameLogic.h"
 #include "FailedLayerLoader.h"
 #include "FailedLayer.h"
+#include "RankLogic.h"
 #include <iostream>
 USING_NS_CC;
 USING_NS_CC_EXT;
@@ -143,6 +144,8 @@ void GameLayer::tapMagicBtn(int num)
         
         FailedLayer * failedLayer = dynamic_cast<FailedLayer*>(node);
         failedLayer->initUI(scoreStr, gmLogic->getNumberString());
+        
+        RankLogic::getInstance()->addScoreInRank(gmLogic->getScore());
     }
     else if (status == 1)
     {
@@ -164,7 +167,7 @@ void GameLayer::schedUpdate(float dt)
     if (num == -1) {
         return;
     }
-    auto  pSeq = Sequence::create(Show::create(), DelayTime::create(1), Hide::create(), DelayTime::create(0.5), NULL);
+    auto  pSeq = Sequence::create(Show::create(), DelayTime::create(0.5), Hide::create(), DelayTime::create(0.5), NULL);
     sprite_table[num]->runAction(pSeq);
 
 }
@@ -172,10 +175,10 @@ void GameLayer::TrigerAutoShow()
 {
     curPos = 0;
     int numCount = gmLogic->getNumCount();
-    this->schedule(CC_SCHEDULE_SELECTOR(GameLayer::schedUpdate), 1.5, numCount, 1.f);
+    this->schedule(CC_SCHEDULE_SELECTOR(GameLayer::schedUpdate), 1, numCount, 1.f);
     
 }
 void GameLayer::onPressExit(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent)
 {
-    //this->removeFromParent();
+    this->removeFromParent();
 }

@@ -25,6 +25,7 @@ public:
     string getNumberString();
 private:
     vector<int> numTable;
+    vector<int> rankTable;
     int curPosition;
     int score;
 };

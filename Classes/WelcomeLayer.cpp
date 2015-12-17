@@ -8,6 +8,9 @@
 
 #include "WelcomeLayer.h"
 #include "GameLayerLoader.h"
+#include "RankLayerLoader.h"
+#include "RankLayer.h"
+#include "RankLogic.h"
 #include <iostream>
 USING_NS_CC;
 USING_NS_CC_EXT;
@@ -27,10 +30,15 @@ SEL_MenuHandler WelcomeLayer::onResolveCCBCCMenuItemSelector(Ref * pTarget, cons
 Control::Handler WelcomeLayer::onResolveCCBCCControlSelector(Ref * pTarget, const char * pSelectorName)
 {
     CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "onPressHelp", WelcomeLayer::onHelp);
-    CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "onPressExit", WelcomeLayer::onExit);
+    CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "onPressRankBtn", WelcomeLayer::onPressRank);
+    CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "onPressExit", WelcomeLayer::onPressExit);
     return nullptr;
 }
 
+void WelcomeLayer::initUI()
+{
+    RankLogic::getInstance()->initRank();
+}
 void WelcomeLayer::onMenuItemStart(cocos2d::Ref * sender)
 {
     
@@ -57,7 +65,26 @@ void WelcomeLayer::onHelp(cocos2d::Ref *sender, cocos2d::extension::Control::Eve
     this->title->setString("on help");
 }
 
-void WelcomeLayer::onExit(cocos2d::Ref *sender, cocos2d::extension::Control::EventType pControlEvent)
+void WelcomeLayer::onPressRank(cocos2d::Ref *sender, cocos2d::extension::Control::EventType pControlEvent)
+{
+    auto nodeLoaderLibrary = NodeLoaderLibrary::newDefaultNodeLoaderLibrary();
+    
+    nodeLoaderLibrary->registerNodeLoader("RankLayer", RankLayerLoader::loader());
+    
+    cocosbuilder::CCBReader * ccbReader = new cocosbuilder::CCBReader(nodeLoaderLibrary);
+    
+    auto node = ccbReader->readNodeGraphFromFile("RankLayer.ccbi", this);
+    
+    ccbReader->release();
+    
+    if (node != nullptr) {
+        this->addChild(node);
+    }
+    
+    RankLayer * rankLayer = dynamic_cast<RankLayer *>(node);
+    rankLayer->initUI();
+}
+void WelcomeLayer::onPressExit(cocos2d::Ref *sender, cocos2d::extension::Control::EventType pControlEvent)
 {
     std::cout<<"on exit"<<std::endl;
     Director::getInstance()->end();

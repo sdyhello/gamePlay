@@ -39,6 +39,8 @@ bool HelloWorld::init()
     if (node != nullptr) {
         this->addChild(node);
     }
+    WelcomeLayer * welcomeLayer = dynamic_cast<WelcomeLayer *>(node);
+    welcomeLayer->initUI();
     return true;
 }
 
