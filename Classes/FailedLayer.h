@@ -12,7 +12,7 @@
 #include "cocos2d.h"
 #include "extensions/cocos-ext.h"
 #include "cocosbuilder/CocosBuilder.h"
-
+using namespace std;
 class FailedLayer
 : public cocos2d::Layer
 , public cocosbuilder::CCBMemberVariableAssigner
@@ -24,7 +24,9 @@ public:
     virtual cocos2d::SEL_MenuHandler onResolveCCBCCMenuItemSelector(cocos2d::Ref * pTarget, const char * pSelectorName);
     virtual cocos2d::extension::Control::Handler onResolveCCBCCControlSelector(cocos2d::Ref * pTarget, const char * pSelectorName);
     void onPressExit(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent);
+    void initUI(string score, string score_num);
 private:
-    cocos2d::Label *labResult;
+    cocos2d::Label *m_numStr;
+    cocos2d::Label *m_score;
 };
 #endif /* FailedLayer_hpp */

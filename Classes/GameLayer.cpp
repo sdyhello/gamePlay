@@ -9,6 +9,7 @@
 #include "GameLayer.h"
 #include "GameLogic.h"
 #include "FailedLayerLoader.h"
+#include "FailedLayer.h"
 #include <iostream>
 USING_NS_CC;
 USING_NS_CC_EXT;
@@ -132,12 +133,16 @@ void GameLayer::tapMagicBtn(int num)
         if (node != nullptr) {
             this->addChild(node);
         }
+
         EventParamMap paramMap;
         char scoreStr[10];
         sprintf(scoreStr, "%d", gmLogic->getScore());
         paramMap.insert(EventParamPair("score", scoreStr));
         paramMap.insert(EventParamPair("score_str", gmLogic->getNumberString()));
         TDCCTalkingDataGA::onEvent("onEnd", &paramMap);
+        
+        FailedLayer * failedLayer = dynamic_cast<FailedLayer*>(node);
+        failedLayer->initUI(scoreStr, gmLogic->getNumberString());
     }
     else if (status == 1)
     {
