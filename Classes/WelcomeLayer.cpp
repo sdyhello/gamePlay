@@ -42,6 +42,10 @@ void WelcomeLayer::initUI()
 void WelcomeLayer::onMenuItemStart(cocos2d::Ref * sender)
 {
     
+}
+
+void WelcomeLayer::onHelp(cocos2d::Ref *sender, cocos2d::extension::Control::EventType pControlEvent)
+{
     auto nodeLoaderLibrary = NodeLoaderLibrary::newDefaultNodeLoaderLibrary();
     
     nodeLoaderLibrary->registerNodeLoader("GameLayer", GameLayerLoader::loader());
@@ -56,13 +60,6 @@ void WelcomeLayer::onMenuItemStart(cocos2d::Ref * sender)
         this->addChild(node);
     }
     TDCCTalkingDataGA::onEvent("newGame");
-}
-
-void WelcomeLayer::onHelp(cocos2d::Ref *sender, cocos2d::extension::Control::EventType pControlEvent)
-{
-    std::cout<<"on help"<<std::endl;
-    TDCCTalkingDataGA::onEvent("help");
-    this->title->setString("on help");
 }
 
 void WelcomeLayer::onPressRank(cocos2d::Ref *sender, cocos2d::extension::Control::EventType pControlEvent)

@@ -165,9 +165,9 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>6.6751937866210938</real>
-									<real>155.26882934570312</real>
-									<integer>0</integer>
+									<real>0.0</real>
+									<real>-4.4117646217346191</real>
+									<integer>4</integer>
 								</array>
 							</dict>
 							<dict>
@@ -177,8 +177,8 @@
 								<string>Point</string>
 								<key>value</key>
 								<array>
-									<real>0.5</real>
-									<real>0.5</real>
+									<real>0.0</real>
+									<real>0.0</real>
 								</array>
 							</dict>
 							<dict>
@@ -229,7 +229,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/bet_bg_2.png</string>
+									<string>ccbResources/bet_bg_1.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -240,7 +240,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/bet_bg_1.png</string>
+									<string>ccbResources/bet_bg_2.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -269,14 +269,34 @@
 				<array>
 					<dict>
 						<key>name</key>
+						<string>visible</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>position</string>
 						<key>type</key>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>50</real>
-							<real>39.412956237792969</real>
-							<integer>4</integer>
+							<real>233</real>
+							<real>562</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>contentSize</string>
+						<key>type</key>
+						<string>Size</string>
+						<key>value</key>
+						<array>
+							<real>192</real>
+							<real>68</real>
+							<integer>0</integer>
 						</array>
 					</dict>
 					<dict>
@@ -546,7 +566,7 @@
 						<key>type</key>
 						<string>String</string>
 						<key>value</key>
-						<string>help</string>
+						<string>NewGame</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -686,13 +706,21 @@
 				<array>
 					<dict>
 						<key>name</key>
+						<string>visible</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>position</string>
 						<key>type</key>
 						<string>Position</string>
 						<key>value</key>
 						<array>
 							<real>329</real>
-							<real>603</real>
+							<real>595</real>
 							<integer>0</integer>
 						</array>
 					</dict>
