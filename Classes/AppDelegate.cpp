@@ -55,10 +55,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
     }
 
     // turn on display FPS
-    director->setDisplayStats(true);
+    director->setDisplayStats(false);
 
     // set FPS. the default value is 1.0/60 if you don't call this
-    director->setAnimationInterval(1.0 / 60);
+    director->setAnimationInterval(1.0 / 30);
 
     // Set the design resolution
     glview->setDesignResolutionSize(designResolutionSize.width, designResolutionSize.height, ResolutionPolicy::SHOW_ALL);
@@ -86,7 +86,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // run
     director->runWithScene(scene);
-    TDCCTalkingDataGA::onStart("BD6757D9C98331C75784E0FDEA8B3299", "电信一区");
+    TDCCTalkingDataGA::onStart("400D7D1065BEABD0019F98038AD98627", "apple");
 //    
 //    EventParamMap paramMap;
 //    paramMap.insert(EventParamPair("level ", "50-60"));

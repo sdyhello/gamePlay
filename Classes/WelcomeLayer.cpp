@@ -40,6 +40,7 @@ Control::Handler WelcomeLayer::onResolveCCBCCControlSelector(Ref * pTarget, cons
 void WelcomeLayer::initUI()
 {
     RankLogic::getInstance()->initRank();
+    title->setString("MemoryChallenge");
 }
 void WelcomeLayer::onMenuItemStart(cocos2d::Ref * sender)
 {
@@ -61,6 +62,7 @@ void WelcomeLayer::onHelp(cocos2d::Ref *sender, cocos2d::extension::Control::Eve
     if (node != nullptr) {
         Layout *layout = Layout::create();
         layout->setContentSize(Size(640, 1136));
+        layout->setBackGroundColor(Color3B::BLACK);
         this->addChild(layout, 9999);
         layout->setTouchEnabled(true);
         layout->addChild(node);

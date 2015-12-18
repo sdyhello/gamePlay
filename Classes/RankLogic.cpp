@@ -27,6 +27,9 @@ RankLogic * RankLogic::getInstance()
 
 void RankLogic::initRank()
 {
+    if (rankTable.size() > 0) {
+        return;
+    }
     getData("rank");
 }
 

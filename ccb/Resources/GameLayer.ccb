@@ -761,7 +761,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/sprite.png</string>
+									<string>ccbResources/btn_2.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -784,7 +784,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/btn_2.png</string>
+									<string>ccbResources/sprite.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -807,7 +807,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/sprite.png</string>
+									<string>ccbResources/btn_2.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -987,7 +987,7 @@
 						<key>value</key>
 						<array>
 							<real>140</real>
-							<real>693</real>
+							<real>705</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1183,7 +1183,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/sprite.png</string>
+									<string>ccbResources/btn_2.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1206,7 +1206,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/btn_2.png</string>
+									<string>ccbResources/sprite.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1229,7 +1229,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/sprite.png</string>
+									<string>ccbResources/btn_2.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1409,7 +1409,7 @@
 						<key>value</key>
 						<array>
 							<real>321</real>
-							<real>693</real>
+							<real>705</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1605,7 +1605,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/sprite.png</string>
+									<string>ccbResources/btn_2.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1628,7 +1628,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/btn_2.png</string>
+									<string>ccbResources/sprite.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1651,7 +1651,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/sprite.png</string>
+									<string>ccbResources/btn_2.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -1830,8 +1830,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>513</real>
-							<real>693</real>
+							<real>502</real>
+							<real>705</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -2027,7 +2027,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/sprite.png</string>
+									<string>ccbResources/btn_2.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -2050,7 +2050,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/btn_2.png</string>
+									<string>ccbResources/sprite.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -2073,7 +2073,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/sprite.png</string>
+									<string>ccbResources/btn_2.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -2449,7 +2449,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/sprite.png</string>
+									<string>ccbResources/btn_2.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -2472,7 +2472,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/btn_2.png</string>
+									<string>ccbResources/sprite.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -2495,7 +2495,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/sprite.png</string>
+									<string>ccbResources/btn_2.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -2871,7 +2871,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/sprite.png</string>
+									<string>ccbResources/btn_2.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -2894,7 +2894,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/btn_2.png</string>
+									<string>ccbResources/sprite.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -2917,7 +2917,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/sprite.png</string>
+									<string>ccbResources/btn_2.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -3096,7 +3096,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>513</real>
+							<real>502</real>
 							<real>528</real>
 							<integer>0</integer>
 						</array>
@@ -3293,7 +3293,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/sprite.png</string>
+									<string>ccbResources/btn_2.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -3316,7 +3316,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/btn_2.png</string>
+									<string>ccbResources/sprite.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -3339,7 +3339,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/sprite.png</string>
+									<string>ccbResources/btn_2.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -3715,7 +3715,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/sprite.png</string>
+									<string>ccbResources/btn_2.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -3738,7 +3738,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/btn_2.png</string>
+									<string>ccbResources/sprite.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -3761,7 +3761,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/sprite.png</string>
+									<string>ccbResources/btn_2.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -4137,7 +4137,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/sprite.png</string>
+									<string>ccbResources/btn_2.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -4160,7 +4160,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/btn_2.png</string>
+									<string>ccbResources/sprite.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -4183,7 +4183,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>ccbResources/sprite.png</string>
+									<string>ccbResources/btn_2.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -4199,6 +4199,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>baseClass</key>
@@ -4362,7 +4364,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>513</real>
+							<real>502</real>
 							<real>351</real>
 							<integer>0</integer>
 						</array>
