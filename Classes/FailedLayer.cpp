@@ -28,7 +28,7 @@ Control::Handler FailedLayer::onResolveCCBCCControlSelector(Ref * pTarget, const
 
 void FailedLayer::onPressExit(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent)
 {
-    this->getParent()->removeFromParent();
+    this->getParent()->getParent()->removeFromParent();
 }
 
 void FailedLayer::initUI(string score, string numStr)

@@ -20,8 +20,7 @@ using namespace cocosbuilder;
 GameLayer::GameLayer()
 : gmLogic (new GameLogic())
 {
-    gmLogic->createNextNum();
-    TrigerAutoShow();
+    
 }
 bool GameLayer::onAssignCCBMemberVariable(cocos2d::Ref *pTarget, const char * pMemberVariableName, cocos2d::Node *pNode)
 {
@@ -105,6 +104,12 @@ void GameLayer::onPressMagicBtn_9(cocos2d::Ref * sender, cocos2d::extension::Con
     tapMagicBtn(9);
 }
 
+void GameLayer::initUI()
+{
+    gmLogic->createNextNum();
+    TrigerAutoShow();
+}
+
 void GameLayer::disableAllButton()
 {
     for (int i = 0; i < 9; i++) {
@@ -161,18 +166,30 @@ void GameLayer::tapMagicBtn(int num)
     labScore->setString(scoreStr);
 }
 
+void GameLayer::checkShowEnd()
+{
+    int nextNum = gmLogic->getNumByIndex(curPos);
+    if (nextNum == -1)
+        ableAllButton();
+}
+
 void GameLayer::schedUpdate(float dt)
 {
     int num = gmLogic->getNumByIndex(curPos++);
+    
     if (num == -1) {
         return;
     }
-    auto  pSeq = Sequence::create(Show::create(), DelayTime::create(0.5), Hide::create(), DelayTime::create(0.5), NULL);
+    
+    auto  pSeq = Sequence::create(Show::create(), DelayTime::create(0.5), Hide::create(), DelayTime::create(0.5),
+                                  CallFuncN::create(CC_CALLBACK_0(GameLayer::checkShowEnd, this)),
+                                  NULL);
     sprite_table[num]->runAction(pSeq);
 
 }
 void GameLayer::TrigerAutoShow()
 {
+    disableAllButton();
     curPos = 0;
     int numCount = gmLogic->getNumCount();
     this->schedule(CC_SCHEDULE_SELECTOR(GameLayer::schedUpdate), 1, numCount, 1.f);
@@ -180,5 +197,5 @@ void GameLayer::TrigerAutoShow()
 }
 void GameLayer::onPressExit(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent)
 {
-    this->removeFromParent();
+    this->getParent()->removeFromParent();
 }

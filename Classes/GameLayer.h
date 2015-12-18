@@ -45,6 +45,8 @@ public:
     void tapMagicBtn(int num);
     void disableAllButton();
     void ableAllButton();
+    void initUI();
+    void checkShowEnd();
 private:
     cocos2d::Label * title;
     cocos2d::Label * labScore;

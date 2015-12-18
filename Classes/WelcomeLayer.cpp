@@ -9,8 +9,10 @@
 #include "WelcomeLayer.h"
 #include "GameLayerLoader.h"
 #include "RankLayerLoader.h"
+#include "GameLayer.h"
 #include "RankLayer.h"
 #include "RankLogic.h"
+#include "ui/CocosGUI.h"
 #include <iostream>
 USING_NS_CC;
 USING_NS_CC_EXT;
@@ -57,9 +59,15 @@ void WelcomeLayer::onHelp(cocos2d::Ref *sender, cocos2d::extension::Control::Eve
     ccbReader->release();
     
     if (node != nullptr) {
-        this->addChild(node);
+        Layout *layout = Layout::create();
+        layout->setContentSize(Size(640, 1136));
+        this->addChild(layout, 9999);
+        layout->setTouchEnabled(true);
+        layout->addChild(node);
     }
     TDCCTalkingDataGA::onEvent("newGame");
+    GameLayer * gameLayer = dynamic_cast<GameLayer *>(node);
+    gameLayer->initUI();
 }
 
 void WelcomeLayer::onPressRank(cocos2d::Ref *sender, cocos2d::extension::Control::EventType pControlEvent)

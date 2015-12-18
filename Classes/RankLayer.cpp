@@ -49,7 +49,7 @@ void RankLayer::initUI()
     int index = 0;
     for (vector<int>::iterator iter = rankTable.begin(); iter != rankTable.end(); iter++)
     {
-        char tempStr[10];
+        char tempStr[100];
         sprintf(tempStr, "No.%d:  %d",index+1, *iter);
         labelTable[index]->setString(tempStr);
         index++;
