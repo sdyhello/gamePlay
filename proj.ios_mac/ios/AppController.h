@@ -10,7 +10,6 @@
 
 @property(nonatomic, strong) IBOutlet GADBannerView *adBanner;
 
-@property(nonatomic, readonly) RootViewController* viewController;
 
 @end
 

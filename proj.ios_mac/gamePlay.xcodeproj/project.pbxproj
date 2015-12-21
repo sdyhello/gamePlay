@@ -99,6 +99,8 @@
 		61935C451C168CE10077685C /* lazydylib1.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 61935C441C168CE10077685C /* lazydylib1.o */; };
 		61935C471C168CF00077685C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61935C461C168CF00077685C /* SystemConfiguration.framework */; };
 		61935C491C168CFD0077685C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61935C481C168CFD0077685C /* Security.framework */; };
+		61A13C5E1C27B17100585CBF /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A13C5D1C27B17100585CBF /* MediaPlayer.framework */; };
+		61A13C601C27B1B200585CBF /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61A13C5F1C27B1B200585CBF /* GameController.framework */; };
 		61D83BA81C19B09E001E3A1A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D83BA71C19B09E001E3A1A /* CoreMedia.framework */; };
 		61D83BAA1C19B0AC001E3A1A /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D83BA91C19B0AC001E3A1A /* EventKit.framework */; };
 		61D83BAC1C19B0B5001E3A1A /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D83BAB1C19B0B5001E3A1A /* EventKitUI.framework */; };
@@ -261,6 +263,8 @@
 		61935C441C168CE10077685C /* lazydylib1.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = lazydylib1.o; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/usr/lib/lazydylib1.o; sourceTree = DEVELOPER_DIR; };
 		61935C461C168CF00077685C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		61935C481C168CFD0077685C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		61A13C5D1C27B17100585CBF /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
+		61A13C5F1C27B1B200585CBF /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
 		61D83BA71C19B09E001E3A1A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
 		61D83BA91C19B0AC001E3A1A /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/System/Library/Frameworks/EventKit.framework; sourceTree = DEVELOPER_DIR; };
 		61D83BAB1C19B0B5001E3A1A /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/System/Library/Frameworks/EventKitUI.framework; sourceTree = DEVELOPER_DIR; };
@@ -293,6 +297,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61A13C601C27B1B200585CBF /* GameController.framework in Frameworks */,
+				61A13C5E1C27B17100585CBF /* MediaPlayer.framework in Frameworks */,
 				61D83BB01C19B0DE001E3A1A /* StoreKit.framework in Frameworks */,
 				61D83BAE1C19B0CF001E3A1A /* MessageUI.framework in Frameworks */,
 				61D83BAC1C19B0B5001E3A1A /* EventKitUI.framework in Frameworks */,
@@ -396,6 +402,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61A13C5F1C27B1B200585CBF /* GameController.framework */,
+				61A13C5D1C27B17100585CBF /* MediaPlayer.framework */,
 				61D83BAF1C19B0DE001E3A1A /* StoreKit.framework */,
 				61D83BAD1C19B0CF001E3A1A /* MessageUI.framework */,
 				61D83BAB1C19B0B5001E3A1A /* EventKitUI.framework */,

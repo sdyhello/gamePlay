@@ -60,20 +60,20 @@ static AppDelegate s_sharedApplication;
     [eaglView setMultipleTouchEnabled:NO];
 
     // Use RootViewController manage CCEAGLView 
-    _viewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
-    _viewController.wantsFullScreenLayout = YES;
-    _viewController.view = eaglView;
+    viewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
+    viewController.wantsFullScreenLayout = YES;
+    viewController.view = eaglView;
 
     // Set RootViewController to window
     if ( [[UIDevice currentDevice].systemVersion floatValue] < 6.0)
     {
         // warning: addSubView doesn't work on iOS6
-        [window addSubview: _viewController.view];
+        [window addSubview: viewController.view];
     }
     else
     {
         // use this method on ios6
-        [window setRootViewController:_viewController];
+        [window setRootViewController:viewController];
     }
 
     [window makeKeyAndVisible];
