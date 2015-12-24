@@ -9,6 +9,7 @@
 #ifndef GameLogic_hpp
 #define GameLogic_hpp
 #include <vector>
+#include <string>
 using namespace std;
 class GameLogic
 {

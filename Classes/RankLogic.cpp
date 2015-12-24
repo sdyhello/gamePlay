@@ -7,6 +7,7 @@
 //
 
 #include "RankLogic.h"
+#include "cocos2d.h"
 #include <vector>
 #include<iomanip>
 using namespace std;
