@@ -913,7 +913,6 @@ void FileUtils::setDefaultResourceRootPath(const std::string& path)
 void FileUtils::setSearchPaths(const std::vector<std::string>& searchPaths)
 {
     bool existDefaultRootPath = false;
-
     _fullPathCache.clear();
     _searchPathArray.clear();
     for (const auto& iter : searchPaths)

@@ -78,7 +78,7 @@ FileUtilsAndroid::~FileUtilsAndroid()
 
 bool FileUtilsAndroid::init()
 {
-    cocosplay::lazyInit();
+    //cocosplay::lazyInit();
     if (cocosplay::isEnabled() && !cocosplay::isDemo())
     {
         _defaultResRootPath = cocosplay::getGameRoot();
@@ -87,7 +87,6 @@ bool FileUtilsAndroid::init()
     {
         _defaultResRootPath = "assets/";
     }
-
     return FileUtils::init();
 }
 

@@ -28,5 +28,32 @@ package org.cocos2dx.cpp;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
 
+import com.tendcloud.tenddata.TalkingDataGA;
+
+import android.os.Bundle;
+
 public class AppActivity extends Cocos2dxActivity {
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		TalkingDataGA.sPlatformType=TalkingDataGA.PLATFORM_TYPE_COCOS2DX;
+		TalkingDataGA.init(this.getApplicationContext(), "400D7D1065BEABD0019F98038AD98627", "TalkingData");
+	}
+	
+	@Override
+	protected void onPause() {
+		super.onPause();
+		TalkingDataGA.onPause(this);
+	}
+	
+	@Override
+	protected void onResume() {
+		super.onResume();
+		TalkingDataGA.onResume(this);
+	}
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+	}
 }
