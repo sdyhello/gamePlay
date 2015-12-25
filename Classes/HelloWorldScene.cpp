@@ -32,7 +32,7 @@ bool HelloWorld::init()
     cocosbuilder::CCBReader * ccbReader = new cocosbuilder::CCBReader(nodeLoaderLibrary);
     
     /* Read a ccbi file. */
-    auto node = ccbReader->readNodeGraphFromFile("ccb/WelcomeLayer.ccbi", this);
+    auto node = ccbReader->readNodeGraphFromFile("WelcomeLayer.ccbi", this);
     
     ccbReader->release();
     

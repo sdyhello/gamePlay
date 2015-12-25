@@ -59,7 +59,7 @@ public class AppActivity extends Cocos2dxActivity {
 
 		AdRequest adRequest = new AdRequest.Builder()
 				.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-				.addTestDevice("1DF047946C45C68B7DBD7BB4027CC800").build();
+				.addTestDevice("AA494A4DD0EEEB0B8C231A48000191AA").build();
 
 		adView.loadAd(adRequest);
 		adView.setBackgroundColor(Color.BLACK);
