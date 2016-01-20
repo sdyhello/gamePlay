@@ -59,5 +59,6 @@ private:
     float updateTime;
     cocos2d::DrawNode *drawNode;
     bool isSuper;
+    bool bDrawLine;
 };
 #endif /* GameLayer_hpp */

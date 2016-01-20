@@ -106,6 +106,7 @@ void GameLayer::onPressMagicBtn_9(cocos2d::Ref * sender, cocos2d::extension::Con
 
 void GameLayer::initUI(bool isSuper)
 {
+    bDrawLine = false;
     this->isSuper = isSuper;
     if (!isSuper) {
         gmLogic->createNextNum();
@@ -194,7 +195,7 @@ void GameLayer::schedUpdate(float dt)
     auto  pSeq = Sequence::create(Show::create(), DelayTime::create(0.5), Hide::create(), DelayTime::create(0.5),
                                   CallFuncN::create(CC_CALLBACK_0(GameLayer::checkShowEnd, this)),
                                   NULL);
-    if (drawNum != -1 and isSuper) {
+    if (drawNum != -1 and isSuper and bDrawLine) {
         drawNode->drawLine(sprite_table[drawNum]->getParent()->getPosition(), sprite_table[num]->getParent()->getPosition(), Color4F(1, 0, 0, 1));
     }
     sprite_table[num]->runAction(pSeq);
