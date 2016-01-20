@@ -24,6 +24,7 @@ public:
     void addScore(int num);
     int getScore();
     string getNumberString();
+    void addNineNum();
 private:
     vector<int> numTable;
     vector<int> rankTable;

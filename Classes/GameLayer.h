@@ -45,7 +45,7 @@ public:
     void tapMagicBtn(int num);
     void disableAllButton();
     void ableAllButton();
-    void initUI();
+    void initUI(bool isSuper);
     void checkShowEnd();
 private:
     cocos2d::Label * title;
@@ -57,5 +57,7 @@ private:
     GameLogic * gmLogic;
     int curPos;
     float updateTime;
+    cocos2d::DrawNode *drawNode;
+    bool isSuper;
 };
 #endif /* GameLayer_hpp */

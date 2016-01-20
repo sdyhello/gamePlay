@@ -33,6 +33,7 @@ Control::Handler WelcomeLayer::onResolveCCBCCControlSelector(Ref * pTarget, cons
 {
     CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "onPressHelp", WelcomeLayer::onHelp);
     CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "onPressRankBtn", WelcomeLayer::onPressRank);
+    CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "onPressSuper", WelcomeLayer::onPressSuper);
     CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "onPressExit", WelcomeLayer::onPressExit);
     return nullptr;
 }
@@ -45,6 +46,31 @@ void WelcomeLayer::initUI()
 void WelcomeLayer::onMenuItemStart(cocos2d::Ref * sender)
 {
     
+}
+
+void WelcomeLayer::onPressSuper(cocos2d::Ref *sender, cocos2d::extension::Control::EventType pControlEvent)
+{
+    auto nodeLoaderLibrary = NodeLoaderLibrary::newDefaultNodeLoaderLibrary();
+    
+    nodeLoaderLibrary->registerNodeLoader("GameLayer", GameLayerLoader::loader());
+    
+    cocosbuilder::CCBReader * ccbReader = new cocosbuilder::CCBReader(nodeLoaderLibrary);
+    
+    auto node = ccbReader->readNodeGraphFromFile("GameLayer.ccbi", this);
+    
+    ccbReader->release();
+    
+    if (node != nullptr) {
+        Layout *layout = Layout::create();
+        layout->setContentSize(Size(640, 1136));
+        layout->setBackGroundColor(Color3B::BLACK);
+        this->addChild(layout, 9999);
+        layout->setTouchEnabled(true);
+        layout->addChild(node);
+    }
+    TDCCTalkingDataGA::onEvent("newGame");
+    GameLayer * gameLayer = dynamic_cast<GameLayer *>(node);
+    gameLayer->initUI(true);
 }
 
 void WelcomeLayer::onHelp(cocos2d::Ref *sender, cocos2d::extension::Control::EventType pControlEvent)
@@ -69,7 +95,7 @@ void WelcomeLayer::onHelp(cocos2d::Ref *sender, cocos2d::extension::Control::Eve
     }
     TDCCTalkingDataGA::onEvent("newGame");
     GameLayer * gameLayer = dynamic_cast<GameLayer *>(node);
-    gameLayer->initUI();
+    gameLayer->initUI(false);
 }
 
 void WelcomeLayer::onPressRank(cocos2d::Ref *sender, cocos2d::extension::Control::EventType pControlEvent)

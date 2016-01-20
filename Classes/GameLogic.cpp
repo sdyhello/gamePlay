@@ -48,6 +48,31 @@ void GameLogic::createNextNum()
     addNum(newNum);
 }
 
+void GameLogic::addNineNum()
+{
+    bool isOk = false;
+    set<int> superTable;
+    int curIndex = 0;
+    while (!isOk) {
+        int num = genRandNum();
+        if (superTable.count(num) == 0)
+        {
+            superTable.insert(num);
+            addNum(num);
+        }
+        for (int i = 1; i <= 9; i++)
+        {
+            if (superTable.count(i) == 0) {
+                break;
+            }
+            curIndex = i;
+        }
+        if (curIndex >= 9) {
+            isOk = true;
+        }
+    }
+}
+
 string GameLogic::getNumberString()
 {
     string numberString;
