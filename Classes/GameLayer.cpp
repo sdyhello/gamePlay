@@ -104,9 +104,37 @@ void GameLayer::onPressMagicBtn_9(cocos2d::Ref * sender, cocos2d::extension::Con
     tapMagicBtn(9);
 }
 
-void GameLayer::initUI(bool isSuper)
+void GameLayer::jumpToEnd()
 {
-    bDrawLine = false;
+    auto nodeLoaderLibrary = NodeLoaderLibrary::newDefaultNodeLoaderLibrary();
+    
+    nodeLoaderLibrary->registerNodeLoader("FailedLayer", FailedLayerLoader::loader());
+    
+    cocosbuilder::CCBReader * ccbReader = new cocosbuilder::CCBReader(nodeLoaderLibrary);
+    
+    auto node = ccbReader->readNodeGraphFromFile("FailedLayer.ccbi", this);
+    
+    ccbReader->release();
+    
+    if (node != nullptr) {
+        this->addChild(node);
+    }
+    
+    EventParamMap paramMap;
+    char scoreStr[10];
+    sprintf(scoreStr, "%d", gmLogic->getScore());
+    paramMap.insert(EventParamPair("score", scoreStr));
+    paramMap.insert(EventParamPair("score_str", gmLogic->getNumberString()));
+    TDCCTalkingDataGA::onEvent("onEnd", &paramMap);
+    
+    FailedLayer * failedLayer = dynamic_cast<FailedLayer*>(node);
+    failedLayer->initUI(scoreStr, gmLogic->getNumberString());
+    
+    RankLogic::getInstance()->addScoreInRank(gmLogic->getScore());
+}
+void GameLayer::initUI(bool isSuper, bool drawLine)
+{
+    bDrawLine = drawLine;
     this->isSuper = isSuper;
     if (!isSuper) {
         gmLogic->createNextNum();
@@ -133,39 +161,19 @@ void GameLayer::ableAllButton()
         button_table[i]->setEnabled(true);
     }
 }
+
 void GameLayer::tapMagicBtn(int num)
 {
     int status = gmLogic->trigerOneBtn(num - 1);
     if (status == -1) {
-        auto nodeLoaderLibrary = NodeLoaderLibrary::newDefaultNodeLoaderLibrary();
-        
-        nodeLoaderLibrary->registerNodeLoader("FailedLayer", FailedLayerLoader::loader());
-        
-        cocosbuilder::CCBReader * ccbReader = new cocosbuilder::CCBReader(nodeLoaderLibrary);
-        
-        auto node = ccbReader->readNodeGraphFromFile("FailedLayer.ccbi", this);
-        
-        ccbReader->release();
-        
-        if (node != nullptr) {
-            this->addChild(node);
-        }
-
-        EventParamMap paramMap;
-        char scoreStr[10];
-        sprintf(scoreStr, "%d", gmLogic->getScore());
-        paramMap.insert(EventParamPair("score", scoreStr));
-        paramMap.insert(EventParamPair("score_str", gmLogic->getNumberString()));
-        TDCCTalkingDataGA::onEvent("onEnd", &paramMap);
-        
-        FailedLayer * failedLayer = dynamic_cast<FailedLayer*>(node);
-        failedLayer->initUI(scoreStr, gmLogic->getNumberString());
-        
-        RankLogic::getInstance()->addScoreInRank(gmLogic->getScore());
+        jumpToEnd();
     }
     else if (status == 1)
     {
-        TrigerAutoShow();
+        if (isSuper)
+            jumpToEnd();
+        else
+            TrigerAutoShow();
     }
     else if (status == 0)
     {

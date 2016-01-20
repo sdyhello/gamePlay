@@ -27,6 +27,7 @@ public:
     void onMenuItemStart(cocos2d::Ref * sender);
     void onHelp(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent);
     void onPressSuper(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent);
+    void onPressHelpSuper(cocos2d::Ref * sender, cocos2d::extension::Control::EventType pControlEvent);
     void onPressExit(cocos2d::Ref *sender, cocos2d::extension::Control::EventType pControlEvent);
     void onPressRank(cocos2d::Ref *sender, cocos2d::extension::Control::EventType pControlEvent);
     void initUI();
