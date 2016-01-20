@@ -10,6 +10,7 @@
 #define GameLogic_hpp
 #include <vector>
 #include <string>
+#include <set>
 using namespace std;
 class GameLogic
 {

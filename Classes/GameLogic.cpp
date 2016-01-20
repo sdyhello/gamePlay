@@ -51,7 +51,7 @@ void GameLogic::createNextNum()
 void GameLogic::addNineNum()
 {
     bool isOk = false;
-    set<int> superTable;
+    std::set<int> superTable;
     int curIndex = 0;
     while (!isOk) {
         int num = genRandNum();
