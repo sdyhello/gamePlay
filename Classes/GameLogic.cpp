@@ -48,6 +48,13 @@ void GameLogic::createNextNum()
     addNum(newNum);
 }
 
+void GameLogic::createThreeNum()
+{
+    for (int i = 0; i < 3; i++) {
+        addNum(genRandNum());
+    }
+}
+
 void GameLogic::addNineNum()
 {
     bool isOk = false;
@@ -85,7 +92,7 @@ string GameLogic::getNumberString()
     return numberString;
 }
 
-int GameLogic::trigerOneBtn(int num)
+int GameLogic::trigerOneBtn(int num, bool bHard)
 {
     if (curPosition < numTable.size()) {
         if (numTable[curPosition] != num) {
@@ -96,7 +103,12 @@ int GameLogic::trigerOneBtn(int num)
     curPosition++;
     addScore(curPosition);
     if (curPosition == numTable.size()) {
-        createNextNum();
+        if (bHard) {
+            createThreeNum();
+        }
+        else{
+            createNextNum();
+        }
         curPosition = 0;
         return 1;
     }

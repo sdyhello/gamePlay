@@ -45,7 +45,7 @@ public:
     void tapMagicBtn(int num);
     void disableAllButton();
     void ableAllButton();
-    void initUI(bool isSuper, bool drawLine);
+    void initUI(bool isSuper, bool drawLine, bool bHard);
     void checkShowEnd();
     void jumpToEnd();
 private:
@@ -61,5 +61,6 @@ private:
     cocos2d::DrawNode *drawNode;
     bool isSuper;
     bool bDrawLine;
+    bool bHard;
 };
 #endif /* GameLayer_hpp */

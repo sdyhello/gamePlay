@@ -132,12 +132,19 @@ void GameLayer::jumpToEnd()
     
     RankLogic::getInstance()->addScoreInRank(gmLogic->getScore());
 }
-void GameLayer::initUI(bool isSuper, bool drawLine)
+void GameLayer::initUI(bool isSuper, bool drawLine, bool bIsHard)
 {
+    bHard = bIsHard;
     bDrawLine = drawLine;
     this->isSuper = isSuper;
     if (!isSuper) {
-        gmLogic->createNextNum();
+        if (bHard) {
+            gmLogic->createThreeNum();
+        }
+        else
+        {
+            gmLogic->createNextNum();
+        }
     }
     else
     {
@@ -164,7 +171,7 @@ void GameLayer::ableAllButton()
 
 void GameLayer::tapMagicBtn(int num)
 {
-    int status = gmLogic->trigerOneBtn(num - 1);
+    int status = gmLogic->trigerOneBtn(num - 1, bHard);
     if (status == -1) {
         jumpToEnd();
     }

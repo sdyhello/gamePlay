@@ -21,11 +21,12 @@ public:
     int getNumCount();
     int genRandNum();
     void createNextNum();
-    int trigerOneBtn(int num);
+    int trigerOneBtn(int num, bool bHard);
     void addScore(int num);
     int getScore();
     string getNumberString();
     void addNineNum();
+    void createThreeNum();
 private:
     vector<int> numTable;
     vector<int> rankTable;
