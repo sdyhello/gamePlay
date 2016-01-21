@@ -68,8 +68,8 @@ public class AppActivity extends Cocos2dxActivity {
 		FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(
 				LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
 		params.gravity = Gravity.TOP;
-
-		addContentView(adView, params);
+		//手动去广告
+		//addContentView(adView, params);
 	}
 	
 	@Override
