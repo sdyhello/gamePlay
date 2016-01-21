@@ -101,7 +101,14 @@ int GameLogic::trigerOneBtn(int num, bool bHard, bool bSuper)
         }
     }
     curPosition++;
-    addScore(curPosition);
+    if (bHard)
+    {
+        addScore(curPosition * 3);
+    }
+    else
+    {
+        addScore(curPosition);
+    }
     if (curPosition == numTable.size()) {
         if (bHard) {
             createThreeNum();
