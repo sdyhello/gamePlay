@@ -21,7 +21,7 @@ public:
     int getNumCount();
     int genRandNum();
     void createNextNum();
-    int trigerOneBtn(int num, bool bHard);
+    int trigerOneBtn(int num, bool bHard, bool bSuper);
     void addScore(int num);
     int getScore();
     string getNumberString();

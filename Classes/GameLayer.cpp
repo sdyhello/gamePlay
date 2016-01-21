@@ -171,7 +171,7 @@ void GameLayer::ableAllButton()
 
 void GameLayer::tapMagicBtn(int num)
 {
-    int status = gmLogic->trigerOneBtn(num - 1, bHard);
+    int status = gmLogic->trigerOneBtn(num - 1, bHard, isSuper);
     if (status == -1) {
         jumpToEnd();
     }

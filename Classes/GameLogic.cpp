@@ -92,7 +92,7 @@ string GameLogic::getNumberString()
     return numberString;
 }
 
-int GameLogic::trigerOneBtn(int num, bool bHard)
+int GameLogic::trigerOneBtn(int num, bool bHard, bool bSuper)
 {
     if (curPosition < numTable.size()) {
         if (numTable[curPosition] != num) {
@@ -107,7 +107,9 @@ int GameLogic::trigerOneBtn(int num, bool bHard)
             createThreeNum();
         }
         else{
-            createNextNum();
+            if (!bSuper) {
+                createNextNum();
+            }
         }
         curPosition = 0;
         return 1;
