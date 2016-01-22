@@ -23,6 +23,7 @@ bool RankLayer::onAssignCCBMemberVariable(Ref * pTarget, const char * pMemberVar
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_rank_8", Label *, labelTable[7]);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_rank_9", Label *, labelTable[8]);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_rank_10", Label *, labelTable[9]);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pSuperCount", Label *, m_pSuperCount);
     return false;
 }
 
@@ -57,4 +58,8 @@ void RankLayer::initUI()
             break;
         }
     }
+    int SuperCount = cocos2d::UserDefault::getInstance()->getIntegerForKey("SuperCount", 0);
+    char str[100];
+    sprintf(str, "%d", SuperCount);
+    m_pSuperCount->setString(str);
 }

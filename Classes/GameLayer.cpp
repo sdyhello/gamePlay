@@ -178,7 +178,13 @@ void GameLayer::tapMagicBtn(int num)
     else if (status == 1)
     {
         if (isSuper)
+        {
             jumpToEnd();
+            if (!bDrawLine) {
+                int SuperCount = cocos2d::UserDefault::getInstance()->getIntegerForKey("SuperCount", 0);
+                cocos2d::UserDefault::getInstance()->setIntegerForKey("SuperCount", SuperCount + 1);
+            }
+        }
         else
             TrigerAutoShow();
     }

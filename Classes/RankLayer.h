@@ -27,5 +27,6 @@ public:
     void initUI();
 private:
     cocos2d::Label * labelTable[10];
+    cocos2d::Label * m_pSuperCount;
 };
 #endif /* RankLayer_hpp */
