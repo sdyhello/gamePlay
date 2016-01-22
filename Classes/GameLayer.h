@@ -51,6 +51,7 @@ public:
 private:
     cocos2d::Label * title;
     cocos2d::Label * labScore;
+    cocos2d::Label * m_pTips;
     cocos2d::extension::ControlButton * m_pButton;
     cocos2d::Node * node_1;
     Scale9Sprite * sprite_table[9];

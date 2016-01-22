@@ -34,6 +34,7 @@ bool GameLayer::onAssignCCBMemberVariable(cocos2d::Ref *pTarget, const char * pM
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "sprite_8", Scale9Sprite *, sprite_table[7]);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "sprite_9", Scale9Sprite *, sprite_table[8]);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pScore", Label *, labScore);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pTips", Label *, m_pTips);
     
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pButton_1", ControlButton *, button_table[0]);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pButton_2", ControlButton *, button_table[1]);
@@ -153,7 +154,7 @@ void GameLayer::initUI(bool isSuper, bool drawLine, bool bIsHard)
         addChild(drawNode);
     }
     TrigerAutoShow();
-    
+    m_pTips->setVisible(false);
 }
 
 void GameLayer::disableAllButton()
@@ -211,9 +212,14 @@ void GameLayer::schedUpdate(float dt)
     int num = gmLogic->getNumByIndex(curPos++);
     int drawNum = gmLogic->getNumByIndex(curPos -2);
     if (num == -1) {
+        m_pTips->setVisible(false);
         return;
     }
-    
+    char countStr[20];
+    sprintf(countStr, "%d", curPos);
+    m_pTips->setScale(1.0);
+    m_pTips->setString(countStr);
+    m_pTips->setVisible(true);
     auto  pSeq = Sequence::create(Show::create(), DelayTime::create(0.5), Hide::create(), DelayTime::create(0.5),
                                   CallFuncN::create(CC_CALLBACK_0(GameLayer::checkShowEnd, this)),
                                   NULL);
@@ -221,6 +227,12 @@ void GameLayer::schedUpdate(float dt)
         drawNode->drawLine(sprite_table[drawNum]->getParent()->getPosition(), sprite_table[num]->getParent()->getPosition(), Color4F(1, 0, 0, 1));
     }
     sprite_table[num]->runAction(pSeq);
+    
+    //缩小数字
+    auto acScale = ScaleTo::create(0.5, 0);
+    auto acHide = Hide::create();
+    auto tipsSeq = Sequence::create(acScale, acHide, nullptr);
+    m_pTips->runAction(tipsSeq);
 
 }
 void GameLayer::TrigerAutoShow()
