@@ -99,6 +99,9 @@ void WelcomeLayer::onPressSuper(cocos2d::Ref *sender, cocos2d::extension::Contro
     TDCCTalkingDataGA::onEvent("newGame");
     GameLayer * gameLayer = dynamic_cast<GameLayer *>(node);
     gameLayer->initUI(true, false, false);
+    int AllSuperCount = cocos2d::UserDefault::getInstance()->getIntegerForKey("AllSuperCount", 0);
+    cocos2d::UserDefault::getInstance()->setIntegerForKey("AllSuperCount", AllSuperCount + 1);
+    TDCCTalkingDataGA::onEvent("AllSuperCount");
 }
 
 void WelcomeLayer::onPressHelpSuper(cocos2d::Ref *sender, cocos2d::extension::Control::EventType pControlEvent)
