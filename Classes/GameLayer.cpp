@@ -183,6 +183,7 @@ void GameLayer::tapMagicBtn(int num)
             if (!bDrawLine) {
                 int SuperCount = cocos2d::UserDefault::getInstance()->getIntegerForKey("SuperCount", 0);
                 cocos2d::UserDefault::getInstance()->setIntegerForKey("SuperCount", SuperCount + 1);
+                TDCCTalkingDataGA::onEvent("passSuperCount");
             }
         }
         else
