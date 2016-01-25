@@ -26,6 +26,10 @@ bool RankLayer::onAssignCCBMemberVariable(Ref * pTarget, const char * pMemberVar
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pSuperCount", Label *, m_pSuperCount);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pAllSuperCount", Label *, m_pAllSuperCount);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pWinrate", Label *, m_pWinrate);
+    
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pUFOSuperCount", Label *, m_pUFOSuperCount);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pUFOAllSuperCount", Label *, m_pUFOAllSuperCount);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pUFOWinrate", Label *, m_pUFOWinrate);
     return false;
 }
 
@@ -53,7 +57,7 @@ void RankLayer::initUI()
     for (vector<int>::iterator iter = rankTable.begin(); iter != rankTable.end(); iter++)
     {
         char tempStr[100];
-        sprintf(tempStr, "No.%d:  %d",index+1, *iter);
+        sprintf(tempStr, "第%d名:  %d",index+1, *iter);
         labelTable[index]->setString(tempStr);
         index++;
         if (index >= 10) {
@@ -70,7 +74,35 @@ void RankLayer::initUI()
     sprintf(strAll, "%d", allSuperCount);
     m_pAllSuperCount->setString(strAll);
     
-    char strWinrate[100];
-    sprintf(strWinrate, "%.2f%%", (float)SuperCount/allSuperCount*100);
-    m_pWinrate->setString(strWinrate);
+    if (allSuperCount > 0) {
+        char strWinrate[100];
+        sprintf(strWinrate, "%.2f%%", (float)SuperCount/allSuperCount*100);
+        m_pWinrate->setString(strWinrate);
+    }
+    else
+    {
+        m_pWinrate->setString("0.00%");
+    }
+    
+    
+    int UFOSuperCount = cocos2d::UserDefault::getInstance()->getIntegerForKey("UFOSuperCount", 0);
+    char strUFO[100];
+    sprintf(strUFO, "%d", UFOSuperCount);
+    m_pUFOSuperCount->setString(strUFO);
+    
+    int allUFOSuperCount = cocos2d::UserDefault::getInstance()->getIntegerForKey("AllUFOSuperCount", 0);
+    char strAllUFO[100];
+    sprintf(strAllUFO, "%d", allUFOSuperCount);
+    m_pUFOAllSuperCount->setString(strAllUFO);
+    
+    if (allUFOSuperCount > 0) {
+        char strWinrateUFO[100];
+        sprintf(strWinrateUFO, "%.2f%%", (float)UFOSuperCount/allUFOSuperCount*100);
+        m_pUFOWinrate->setString(strWinrateUFO);
+    }
+    else
+    {
+        m_pUFOWinrate->setString("0.00%");
+    }
+    
 }

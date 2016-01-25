@@ -133,10 +133,10 @@ void GameLayer::jumpToEnd()
     
     RankLogic::getInstance()->addScoreInRank(gmLogic->getScore());
 }
-void GameLayer::initUI(bool isSuper, bool drawLine, bool bIsHard)
+void GameLayer::initUI(bool isSuper, bool isUFOSuper, bool bIsHard)
 {
     bHard = bIsHard;
-    bDrawLine = drawLine;
+    bisUFOSuper = isUFOSuper;
     this->isSuper = isSuper;
     if (!isSuper) {
         if (bHard) {
@@ -149,9 +149,14 @@ void GameLayer::initUI(bool isSuper, bool drawLine, bool bIsHard)
     }
     else
     {
-        gmLogic->addNineNum();
-        drawNode = DrawNode::create();
-        addChild(drawNode);
+        if (isUFOSuper) {
+            gmLogic->addNineNum();
+            gmLogic->addNineNum();
+        }
+        else
+        {
+            gmLogic->addNineNum();
+        }
     }
     TrigerAutoShow();
     m_pTips->setVisible(false);
@@ -182,10 +187,16 @@ void GameLayer::tapMagicBtn(int num)
         if (isSuper)
         {
             jumpToEnd();
-            if (!bDrawLine) {
+            if (!bisUFOSuper) {
                 int SuperCount = cocos2d::UserDefault::getInstance()->getIntegerForKey("SuperCount", 0);
                 cocos2d::UserDefault::getInstance()->setIntegerForKey("SuperCount", SuperCount + 1);
                 TDCCTalkingDataGA::onEvent("passSuperCount");
+            }
+            else
+            {
+                int UFOSuperCount = cocos2d::UserDefault::getInstance()->getIntegerForKey("UFOSuperCount", 0);
+                cocos2d::UserDefault::getInstance()->setIntegerForKey("UFOSuperCount", UFOSuperCount + 1);
+                TDCCTalkingDataGA::onEvent("passUFOSuperCount");
             }
         }
         else
@@ -211,7 +222,6 @@ void GameLayer::checkShowEnd()
 void GameLayer::schedUpdate(float dt)
 {
     int num = gmLogic->getNumByIndex(curPos++);
-    int drawNum = gmLogic->getNumByIndex(curPos -2);
     if (num == -1) {
         m_pTips->setVisible(false);
         return;
@@ -224,9 +234,6 @@ void GameLayer::schedUpdate(float dt)
     auto  pSeq = Sequence::create(Show::create(), DelayTime::create(0.5), Hide::create(), DelayTime::create(0.5),
                                   CallFuncN::create(CC_CALLBACK_0(GameLayer::checkShowEnd, this)),
                                   NULL);
-    if (drawNum != -1 and isSuper and bDrawLine) {
-        drawNode->drawLine(sprite_table[drawNum]->getParent()->getPosition(), sprite_table[num]->getParent()->getPosition(), Color4F(1, 0, 0, 1));
-    }
     sprite_table[num]->runAction(pSeq);
     
     //缩小数字

@@ -34,7 +34,7 @@ Control::Handler WelcomeLayer::onResolveCCBCCControlSelector(Ref * pTarget, cons
     CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "onPressHelp", WelcomeLayer::onHelp);
     CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "onPressRankBtn", WelcomeLayer::onPressRank);
     CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "onPressSuper", WelcomeLayer::onPressSuper);
-    CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "onPressHelpSuper", WelcomeLayer::onPressHelpSuper);
+    CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "onPressUFOSuper", WelcomeLayer::onPressUFOSuper);
     CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "onPressHardGame", WelcomeLayer::onPressHardGame);
     
     CCB_SELECTORRESOLVER_CCCONTROL_GLUE(this, "onPressExit", WelcomeLayer::onPressExit);
@@ -44,7 +44,7 @@ Control::Handler WelcomeLayer::onResolveCCBCCControlSelector(Ref * pTarget, cons
 void WelcomeLayer::initUI()
 {
     RankLogic::getInstance()->initRank();
-    title->setString("MemoryChallenge");
+    title->setString("记忆力挑战");
 }
 void WelcomeLayer::onMenuItemStart(cocos2d::Ref * sender)
 {
@@ -103,7 +103,7 @@ void WelcomeLayer::onPressSuper(cocos2d::Ref *sender, cocos2d::extension::Contro
     TDCCTalkingDataGA::onEvent("superGame");
 }
 
-void WelcomeLayer::onPressHelpSuper(cocos2d::Ref *sender, cocos2d::extension::Control::EventType pControlEvent)
+void WelcomeLayer::onPressUFOSuper(cocos2d::Ref *sender, cocos2d::extension::Control::EventType pControlEvent)
 {
     auto nodeLoaderLibrary = NodeLoaderLibrary::newDefaultNodeLoaderLibrary();
     
@@ -123,9 +123,12 @@ void WelcomeLayer::onPressHelpSuper(cocos2d::Ref *sender, cocos2d::extension::Co
         layout->setTouchEnabled(true);
         layout->addChild(node);
     }
-    TDCCTalkingDataGA::onEvent("helpSuperGame");
+    TDCCTalkingDataGA::onEvent("UFOSuperGame");
     GameLayer * gameLayer = dynamic_cast<GameLayer *>(node);
     gameLayer->initUI(true, true, false);
+    
+    int AllUFOSuperCount = cocos2d::UserDefault::getInstance()->getIntegerForKey("AllUFOSuperCount", 0);
+    cocos2d::UserDefault::getInstance()->setIntegerForKey("AllUFOSuperCount", AllUFOSuperCount + 1);
 }
 
 void WelcomeLayer::onHelp(cocos2d::Ref *sender, cocos2d::extension::Control::EventType pControlEvent)

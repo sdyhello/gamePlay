@@ -95,7 +95,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "115"
             endingLineNumber = "115"
-            landmarkName = "GameLayer::initUI(bool isSuper)"
+            landmarkName = "GameLayer::jumpToEnd()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

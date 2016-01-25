@@ -566,7 +566,7 @@
 						<key>type</key>
 						<string>String</string>
 						<key>value</key>
-						<string>NewGame</string>
+						<string>简单模式</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -774,7 +774,7 @@
 						<key>type</key>
 						<string>String</string>
 						<key>value</key>
-						<string>HardGame</string>
+						<string>困难模式</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1055,8 +1055,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>325</real>
-							<real>395</real>
+							<real>324</real>
+							<real>219</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1118,7 +1118,7 @@
 						<key>type</key>
 						<string>String</string>
 						<key>value</key>
-						<string>Rank</string>
+						<string>排行榜</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1263,8 +1263,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>325.187255859375</real>
-							<real>306.21768188476562</real>
+							<real>328.187255859375</real>
+							<real>402.21768188476562</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1326,7 +1326,7 @@
 						<key>type</key>
 						<string>String</string>
 						<key>value</key>
-						<string>Super</string>
+						<string> 挑战模式</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1471,8 +1471,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>325.187255859375</real>
-							<real>217.21768188476562</real>
+							<real>328.187255859375</real>
+							<real>313.21768188476562</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1515,7 +1515,7 @@
 						<string>BlockCCControl</string>
 						<key>value</key>
 						<array>
-							<string>onPressHelpSuper</string>
+							<string>onPressUFOSuper</string>
 							<integer>1</integer>
 							<integer>32</integer>
 						</array>
@@ -1534,7 +1534,7 @@
 						<key>type</key>
 						<string>String</string>
 						<key>value</key>
-						<string>HelpSuper</string>
+						<string>外星人模式</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1742,7 +1742,7 @@
 						<key>type</key>
 						<string>String</string>
 						<key>value</key>
-						<string>Exit</string>
+						<string>退出</string>
 					</dict>
 					<dict>
 						<key>name</key>

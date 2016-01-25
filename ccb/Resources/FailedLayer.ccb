@@ -366,7 +366,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>Score:</string>
+						<string>得分：</string>
 					</dict>
 				</array>
 			</dict>
@@ -598,7 +598,7 @@
 						<key>type</key>
 						<string>Text</string>
 						<key>value</key>
-						<string>numbers:</string>
+						<string>数字串：</string>
 					</dict>
 				</array>
 			</dict>
@@ -687,7 +687,7 @@
 						<key>type</key>
 						<string>String</string>
 						<key>value</key>
-						<string>Back</string>
+						<string>返回</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -809,8 +809,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

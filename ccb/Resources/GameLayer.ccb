@@ -49,8 +49,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>303.00003051757812</real>
-									<real>872</real>
+									<real>277.00003051757812</real>
+									<real>871</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -151,7 +151,7 @@
 								<key>type</key>
 								<string>Text</string>
 								<key>value</key>
-								<string>Score:</string>
+								<string>当前得分：</string>
 							</dict>
 						</array>
 					</dict>
@@ -177,8 +177,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>405.00006103515625</real>
-									<real>874</real>
+									<real>409.00006103515625</real>
+									<real>879</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -480,7 +480,7 @@
 						<key>type</key>
 						<string>String</string>
 						<key>value</key>
-						<string>Exit</string>
+						<string>退出</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -602,6 +602,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>

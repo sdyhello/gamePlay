@@ -30,5 +30,8 @@ private:
     cocos2d::Label * m_pSuperCount;
     cocos2d::Label * m_pAllSuperCount;
     cocos2d::Label * m_pWinrate;
+    cocos2d::Label * m_pUFOSuperCount;
+    cocos2d::Label * m_pUFOAllSuperCount;
+    cocos2d::Label * m_pUFOWinrate;
 };
 #endif /* RankLayer_hpp */
