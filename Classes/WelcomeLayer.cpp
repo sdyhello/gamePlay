@@ -71,7 +71,7 @@ void WelcomeLayer::onPressHardGame(cocos2d::Ref *sender, cocos2d::extension::Con
         layout->setTouchEnabled(true);
         layout->addChild(node);
     }
-    TDCCTalkingDataGA::onEvent("newGame");
+    TDCCTalkingDataGA::onEvent("hardGame");
     GameLayer * gameLayer = dynamic_cast<GameLayer *>(node);
     gameLayer->initUI(false, false, true);
 }
@@ -96,12 +96,11 @@ void WelcomeLayer::onPressSuper(cocos2d::Ref *sender, cocos2d::extension::Contro
         layout->setTouchEnabled(true);
         layout->addChild(node);
     }
-    TDCCTalkingDataGA::onEvent("newGame");
     GameLayer * gameLayer = dynamic_cast<GameLayer *>(node);
     gameLayer->initUI(true, false, false);
     int AllSuperCount = cocos2d::UserDefault::getInstance()->getIntegerForKey("AllSuperCount", 0);
     cocos2d::UserDefault::getInstance()->setIntegerForKey("AllSuperCount", AllSuperCount + 1);
-    TDCCTalkingDataGA::onEvent("AllSuperCount");
+    TDCCTalkingDataGA::onEvent("superGame");
 }
 
 void WelcomeLayer::onPressHelpSuper(cocos2d::Ref *sender, cocos2d::extension::Control::EventType pControlEvent)
@@ -124,7 +123,7 @@ void WelcomeLayer::onPressHelpSuper(cocos2d::Ref *sender, cocos2d::extension::Co
         layout->setTouchEnabled(true);
         layout->addChild(node);
     }
-    TDCCTalkingDataGA::onEvent("newGame");
+    TDCCTalkingDataGA::onEvent("helpSuperGame");
     GameLayer * gameLayer = dynamic_cast<GameLayer *>(node);
     gameLayer->initUI(true, true, false);
 }
@@ -149,7 +148,7 @@ void WelcomeLayer::onHelp(cocos2d::Ref *sender, cocos2d::extension::Control::Eve
         layout->setTouchEnabled(true);
         layout->addChild(node);
     }
-    TDCCTalkingDataGA::onEvent("newGame");
+    TDCCTalkingDataGA::onEvent("normalGame");
     GameLayer * gameLayer = dynamic_cast<GameLayer *>(node);
     gameLayer->initUI(false, false, false);
 }
@@ -172,6 +171,7 @@ void WelcomeLayer::onPressRank(cocos2d::Ref *sender, cocos2d::extension::Control
     
     RankLayer * rankLayer = dynamic_cast<RankLayer *>(node);
     rankLayer->initUI();
+    TDCCTalkingDataGA::onEvent("openRank");
 }
 void WelcomeLayer::onPressExit(cocos2d::Ref *sender, cocos2d::extension::Control::EventType pControlEvent)
 {

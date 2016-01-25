@@ -29,5 +29,6 @@ private:
     cocos2d::Label * labelTable[10];
     cocos2d::Label * m_pSuperCount;
     cocos2d::Label * m_pAllSuperCount;
+    cocos2d::Label * m_pWinrate;
 };
 #endif /* RankLayer_hpp */

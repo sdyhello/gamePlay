@@ -155,6 +155,7 @@ void GameLayer::initUI(bool isSuper, bool drawLine, bool bIsHard)
     }
     TrigerAutoShow();
     m_pTips->setVisible(false);
+    TDCCTalkingDataGA::onEvent("newGame");
 }
 
 void GameLayer::disableAllButton()
@@ -232,6 +233,8 @@ void GameLayer::schedUpdate(float dt)
     auto acScale = ScaleTo::create(0.5, 0);
     auto acHide = Hide::create();
     auto tipsSeq = Sequence::create(acScale, acHide, nullptr);
+    auto pos = sprite_table[num]->getPosition();
+    m_pTips->setPosition(sprite_table[num]->getParent()->getPosition());
     m_pTips->runAction(tipsSeq);
 
 }

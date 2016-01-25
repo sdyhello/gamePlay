@@ -49,8 +49,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>315.00003051757812</real>
-									<real>885</real>
+									<real>303.00003051757812</real>
+									<real>872</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -177,8 +177,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>399.00006103515625</real>
-									<real>885</real>
+									<real>405.00006103515625</real>
+									<real>874</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -4423,8 +4423,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>321</real>
-							<real>541</real>
+							<real>320</real>
+							<real>527</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -4475,7 +4475,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>300</real>
+							<real>150</real>
 							<integer>0</integer>
 						</array>
 					</dict>

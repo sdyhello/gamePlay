@@ -25,6 +25,7 @@ bool RankLayer::onAssignCCBMemberVariable(Ref * pTarget, const char * pMemberVar
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_rank_10", Label *, labelTable[9]);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pSuperCount", Label *, m_pSuperCount);
     CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pAllSuperCount", Label *, m_pAllSuperCount);
+    CCB_MEMBERVARIABLEASSIGNER_GLUE(this, "m_pWinrate", Label *, m_pWinrate);
     return false;
 }
 
@@ -68,4 +69,8 @@ void RankLayer::initUI()
     char strAll[100];
     sprintf(strAll, "%d", allSuperCount);
     m_pAllSuperCount->setString(strAll);
+    
+    char strWinrate[100];
+    sprintf(strWinrate, "%.2f%%", (float)SuperCount/allSuperCount*100);
+    m_pWinrate->setString(strWinrate);
 }
