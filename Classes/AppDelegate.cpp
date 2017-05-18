@@ -16,6 +16,7 @@ AppDelegate::AppDelegate() {
     searchPath.push_back("ccb");
     searchPath.push_back("ccbResources");
 	FileUtils::getInstance()->setSearchPaths(searchPath);
+    //test
 }
 
 AppDelegate::~AppDelegate() 
